@@ -1,0 +1,188 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<Meta name="ExplicitAutoJoints">true</Meta>
+	<External>null</External>
+	<External>nil</External>
+	<Item class="LocalScript" referent="RBXA57BA600345D43A7B1538891550022E8">
+		<Properties>
+			<ProtectedString name="Source"><![CDATA[local ToolHandler = require(script.ToolHandler)
+local player = game.Players.LocalPlayer
+local RP = game:GetService("ReplicatedStorage")
+local ToolEvent = RP:WaitForChild("Events"):WaitForChild("RemoteEvents"):WaitForChild("ToolEvent")
+
+local handler = ToolHandler.new(player)
+
+local function ToolAsset(tool, b)
+	local _name = tool.Name
+	local _module = script:WaitForChild("Tools"):FindFirstChild(_name)
+	
+	if _module then
+		_module = require(_module)
+		
+		if b then
+			_module.Equip(player, tool)
+		else
+			_module.Unequipped(player, tool)
+		end
+		
+	end
+end
+
+handler.OnEquipped = function(tool)
+	ToolAsset(tool, true)
+end
+
+handler.OnUnequipped = function(tool)
+	ToolAsset(tool, false)
+end
+
+handler.OnActivated = function(tool)
+	ToolEvent:FireServer("Active", tool.Name)
+end]]></ProtectedString>
+			<bool name="Disabled">false</bool>
+			<Content name="LinkedSource"><null></null></Content>
+			<token name="RunContext">0</token>
+			<string name="ScriptGuid">{3DE8055F-4B8A-4213-AFEB-C5821DB467FA}</string>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<string name="Name">Client</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+		<Item class="ModuleScript" referent="RBX34BF966ECAB948D59085416AC6FBA02F">
+			<Properties>
+				<Content name="LinkedSource"><null></null></Content>
+				<ProtectedString name="Source"><![CDATA[local ToolHandler = {}
+ToolHandler.__index = ToolHandler
+
+function ToolHandler.new(player)
+	assert(player and player:IsA("Player"), "Player invalide")
+
+	local self = setmetatable({}, ToolHandler)
+
+	self.Player = player
+	self.Character = player.Character or player.CharacterAdded:Wait()
+
+	-- Callbacks
+	self.OnEquipped = nil      -- function(tool)
+	self.OnUnequipped = nil    -- function(tool)
+	self.OnActivated = nil     -- function(tool)
+
+	self._connections = {}
+	self._toolConnections = {}
+
+	self:_watchCharacter(self.Character)
+
+	table.insert(self._connections,
+		player.CharacterAdded:Connect(function(char)
+			self.Character = char
+			self:_watchCharacter(char)
+		end)
+	)
+
+	return self
+end
+
+-- ================= CHARACTER =================
+
+function ToolHandler:_watchCharacter(character)
+
+	table.insert(self._connections,
+		character.ChildAdded:Connect(function(tool)
+			if tool:IsA("Tool") then
+				self:_connectTool(tool)
+				if self.OnEquipped then
+					self.OnEquipped(tool)
+				end
+			end
+		end)
+	)
+
+	table.insert(self._connections,
+		character.ChildRemoved:Connect(function(tool)
+			if tool:IsA("Tool") then
+				self:_disconnectTool(tool)
+				if self.OnUnequipped then
+					self.OnUnequipped(tool)
+				end
+			end
+		end)
+	)
+end
+
+-- ================= TOOL =================
+
+function ToolHandler:_connectTool(tool)
+	if self._toolConnections[tool] then return end
+
+	self._toolConnections[tool] = tool.Activated:Connect(function()
+		if self.OnActivated then
+			self.OnActivated(tool)
+		end
+	end)
+end
+
+function ToolHandler:_disconnectTool(tool)
+	local conn = self._toolConnections[tool]
+	if conn then
+		conn:Disconnect()
+		self._toolConnections[tool] = nil
+	end
+end
+
+-- ================= CLEANUP =================
+
+function ToolHandler:Destroy()
+	for _, conn in ipairs(self._connections) do
+		conn:Disconnect()
+	end
+
+	for _, conn in pairs(self._toolConnections) do
+		conn:Disconnect()
+	end
+
+	table.clear(self)
+end
+
+return ToolHandler]]></ProtectedString>
+				<string name="ScriptGuid">{47351AD6-7130-4FA8-B765-CB828CD17880}</string>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">ToolHandler</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+		</Item>
+		<Item class="Folder" referent="RBXA0C39C9C4A4F4F4197B5553B70C28EB3">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Tools</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="ModuleScript" referent="RBX941C30E388E84373B0849322C4ED76D6">
+				<Properties>
+					<Content name="LinkedSource"><null></null></Content>
+					<ProtectedString name="Source"><![CDATA[return {
+	Equip = function(player : Player, tool)
+		tool.Handle.Equip:Play()
+	end,
+	Unequipped = function(player : Player, tool)
+		tool.Handle.UnEquip:Play()
+	end,
+}]]></ProtectedString>
+					<string name="ScriptGuid">{0BC80D99-CE72-4B33-A37C-DA9CFCAB1462}</string>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Club</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+</roblox>

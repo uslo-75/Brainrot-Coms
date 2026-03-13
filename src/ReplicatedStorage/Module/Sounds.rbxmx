@@ -1,0 +1,30 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+  <Meta name="ExplicitAutoJoints">true</Meta>
+  <External>null</External>
+  <External>nil</External>
+<Item class="ModuleScript" referent="RBXF3BBF16B32EC414D9C151DF64D39623C"><Properties><Content name="LinkedSource"><null></null></Content><ProtectedString name="Source"><![CDATA[local Sounds = {}
+
+Sounds.Play = function(SoundName)
+	local Sound = script:FindFirstChild(SoundName)
+	if Sound then
+		Sound:Play()
+		return Sound
+	end
+end
+
+
+Sounds.PlayParts = function(SoundName, part, duration)
+	local Sound = script:FindFirstChild(SoundName)
+	if Sound then
+		Sound = Sound:Clone()
+		Sound.Parent = part
+		Sound:Play()
+		if duration then
+			game.Debris:AddItem(Sound, duration)
+		end
+	end
+end
+
+return Sounds
+]]></ProtectedString><string name="ScriptGuid">{BA1BB154-9E03-40A0-9C9E-0AF2F8D7A9B8}</string><BinaryString name="AttributesSerialize"></BinaryString><SecurityCapabilities name="Capabilities">0</SecurityCapabilities><bool name="DefinesCapabilities">false</bool><string name="Name">Sounds</string><int64 name="SourceAssetId">-1</int64><BinaryString name="Tags"></BinaryString></Properties><Item class="Sound" referent="RBX641D7350607443A8B9617C52E0784CF3"><Properties><bool name="AcousticSimulationEnabled">true</bool><bool name="IsMutedForCapture">false</bool><NumberRange name="LoopRegion">0 60000 </NumberRange><bool name="Looped">false</bool><bool name="PlayOnRemove">false</bool><NumberRange name="PlaybackRegion">0 60000 </NumberRange><bool name="PlaybackRegionsEnabled">false</bool><float name="PlaybackSpeed">1</float><bool name="Playing">false</bool><float name="RollOffMaxDistance">35</float><float name="RollOffMinDistance">10</float><token name="RollOffMode">0</token><Ref name="SoundGroup">null</Ref><Content name="SoundId"><url>rbxassetid://139922061047157</url></Content><double name="TimePosition">0</double><float name="Volume">0.5</float><BinaryString name="AttributesSerialize"></BinaryString><SecurityCapabilities name="Capabilities">0</SecurityCapabilities><bool name="DefinesCapabilities">false</bool><string name="Name">CashRecup</string><int64 name="SourceAssetId">139922061047157</int64><BinaryString name="Tags"></BinaryString></Properties></Item><Item class="Sound" referent="RBXDFF723222A5F408693D8CC2FCFBED0DF"><Properties><bool name="AcousticSimulationEnabled">true</bool><bool name="IsMutedForCapture">false</bool><NumberRange name="LoopRegion">0 60000 </NumberRange><bool name="Looped">false</bool><bool name="PlayOnRemove">false</bool><NumberRange name="PlaybackRegion">0 60000 </NumberRange><bool name="PlaybackRegionsEnabled">false</bool><float name="PlaybackSpeed">1</float><bool name="Playing">false</bool><float name="RollOffMaxDistance">10000</float><float name="RollOffMinDistance">10</float><token name="RollOffMode">0</token><Ref name="SoundGroup">null</Ref><Content name="SoundId"><url>rbxassetid://131450874100593</url></Content><double name="TimePosition">0</double><float name="Volume">0.5</float><BinaryString name="AttributesSerialize"></BinaryString><SecurityCapabilities name="Capabilities">0</SecurityCapabilities><bool name="DefinesCapabilities">false</bool><string name="Name">ClickSound</string><int64 name="SourceAssetId">131450874100593</int64><BinaryString name="Tags"></BinaryString></Properties></Item></Item>
+</roblox>

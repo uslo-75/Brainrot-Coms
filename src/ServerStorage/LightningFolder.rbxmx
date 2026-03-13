@@ -1,0 +1,2532 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<Meta name="ExplicitAutoJoints">true</Meta>
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Folder" referent="RBXD7D7C2F5593B42E58FE8DEA4126FFB0C">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<string name="Name">LightningFolder</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+		<Item class="Folder" referent="RBX749DCFC452E3462993C5213A70368CB1">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">BubbleGum Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="Configuration" referent="RBXDEF99929F5F241E595F86CF0CAA673FB">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">BubbleGum Configuration</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Color3Value" referent="RBX23AD3831C7F9486D9563F3168124AC1C">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.392156869</R>
+							<G>0.392156869</G>
+							<B>0.392156869</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_OutdoorAmbient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="NumberValue" referent="RBXCF0A163D4C5B4AACBE94ED4CA0E39BD7">
+					<Properties>
+						<double name="Value">-0.11000000000000000056</double>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Exposure_Compensation</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX242540B39049491EB41A7EDD8D2F4D92">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_EnvironmentSpecularScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX67BE918420BC4B9B88CF410AAABE0673">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_EnvironmentDiffuseScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX8370E5A7A25A4176BF6D09EAFD801E2D">
+					<Properties>
+						<Color3 name="Value">
+							<R>0</R>
+							<G>0</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_ColorShift_Top</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX96A702E8AAF04D2E87FB047A489C830C">
+					<Properties>
+						<Color3 name="Value">
+							<R>0</R>
+							<G>0</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_ColorShift_Bottom</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX08ACA833B7DF44DAA3BDFF7E06F06C59">
+					<Properties>
+						<int64 name="Value">0</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Brightness</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX4CF4B65E97014010AC20AD9BE99EEDDF">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.784313738</R>
+							<G>0.588235319</G>
+							<B>0.70588237</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Ambient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Atmosphere" referent="RBXF6EB905D005441EB845BBD8A9484CC12">
+				<Properties>
+					<Color3 name="Color">
+						<R>0.745098054</R>
+						<G>0.745098054</G>
+						<B>0.745098054</B>
+					</Color3>
+					<Color3 name="Decay">
+						<R>0.392156869</R>
+						<G>0.588235319</G>
+						<B>0.980392158</B>
+					</Color3>
+					<float name="Density">0.200000003</float>
+					<float name="Glare">0</float>
+					<float name="Haze">0</float>
+					<float name="Offset">0</float>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Atmosphere</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Sky" referent="RBX5194C8A174F84457AA74F95B15141B74">
+				<Properties>
+					<bool name="CelestialBodiesShown">true</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+					<Content name="SkyboxBk"><url>rbxassetid://103994796436499</url></Content>
+					<Content name="SkyboxDn"><url>rbxassetid://88135141884296</url></Content>
+					<Content name="SkyboxFt"><url>rbxassetid://71705651078185</url></Content>
+					<Content name="SkyboxLf"><url>rbxassetid://83560072752341</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>rbxassetid://96879039628172</url></Content>
+					<Content name="SkyboxUp"><url>rbxassetid://131043401069407</url></Content>
+					<int name="StarCount">3000</int>
+					<float name="SunAngularSize">21</float>
+					<Content name="SunTextureId"><url>rbxasset://sky/sun.jpg</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Sky</string>
+					<int64 name="SourceAssetId">76584711398016</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BloomEffect" referent="RBXA0C35A57E5704F6E841ECE9E28DEB1A2">
+				<Properties>
+					<float name="Intensity">0.100000001</float>
+					<float name="Size">12</float>
+					<float name="Threshold">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Bloom</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BlurEffect" referent="RBX984584F076354718A9C1B6E4215C3DA2">
+				<Properties>
+					<float name="Size">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Blur</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ColorCorrectionEffect" referent="RBX4C251A68E0BB4643B0B4194CD7874DF6">
+				<Properties>
+					<float name="Brightness">0.0700000003</float>
+					<float name="Contrast">0.100000001</float>
+					<float name="Saturation">0.200000003</float>
+					<Color3 name="TintColor">
+						<R>1</R>
+						<G>1</G>
+						<B>1</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="DepthOfFieldEffect" referent="RBX4A839D5D5C90469EA59A155A1964F8E5">
+				<Properties>
+					<float name="FarIntensity">0.0469999984</float>
+					<float name="FocusDistance">0.0500000007</float>
+					<float name="InFocusRadius">10</float>
+					<float name="NearIntensity">0.75</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">DepthOfField</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="SunRaysEffect" referent="RBX280E2C41B69F4956B43774ABEB53030D">
+				<Properties>
+					<float name="Intensity">0.0500000007</float>
+					<float name="Spread">0.100000001</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">SunRays</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Folder" referent="RBX64DA5FF6D11C42A692BF323786B796F3">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Disco Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="ColorCorrectionEffect" referent="RBX6C2E49F2724144228F7A2C04B1144BB5">
+				<Properties>
+					<float name="Brightness">0.0399999991</float>
+					<float name="Contrast">0.100000001</float>
+					<float name="Saturation">0.100000001</float>
+					<Color3 name="TintColor">
+						<R>0.666666687</R>
+						<G>0</G>
+						<B>1</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">116090873653606</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Script" referent="RBXB698DFC6EE2E43BDA587D03ED8766EE4">
+					<Properties>
+						<ProtectedString name="Source"><![CDATA[-- ModuleScript: Package
+-- Written by: @Quenty
+
+local RunService = game:GetService("RunService")
+local Lighting = game:GetService("Lighting")
+
+local function SafeWaitForChild(ParentObject, ChildName, TimeoutDuration)
+	-- Safely waits for a child instance to be available in the hierarchy
+	-- Useful for handling replication delays and network latency issues
+
+	if ParentObject == nil then
+		error("Parent object cannot be nil", 2)
+	end
+	if type(ChildName) ~= "string" then
+		error("Child name must be a string value", 2)
+	end
+
+	local TargetChild = ParentObject:FindFirstChild(ChildName)
+	local StartTime = tick()
+	local TimeoutWarning = false
+
+	while TargetChild == nil and ParentObject ~= nil do
+		RunService.Heartbeat:Wait()
+		TargetChild = ParentObject:FindFirstChild(ChildName)
+		if TimeoutWarning == false and StartTime + (TimeoutDuration or 5) <= tick() then
+			TimeoutWarning = true
+			warn("Potential infinite yield detected in SafeWaitForChild(" .. ParentObject:GetFullName() .. ", " .. ChildName .. ")")
+			if TimeoutDuration then
+				return ParentObject:FindFirstChild(ChildName)
+			end
+		end
+	end
+
+	if ParentObject == nil then
+		warn("Parent object no longer exists during SafeWaitForChild operation")
+	end
+
+	return TargetChild
+end
+
+local function RecursiveChildOperation(ParentInstance, OperationFunction)
+	-- Recursively applies operation function to all children in hierarchy
+	-- Maintains proper tree traversal order and handles nested structures
+
+	OperationFunction(ParentInstance)
+
+	for _, ChildInstance in ipairs(ParentInstance:GetChildren()) do
+		RecursiveChildOperation(ChildInstance, OperationFunction)
+	end
+end
+
+local function ApplyInstanceProperties(TargetInstance, PropertyTable)
+	-- Applies property values and child objects to target instance
+	-- Supports both direct property assignment and child object parenting
+
+	if type(PropertyTable) ~= "table" then
+		error("Property table must be a valid table structure", 2)
+	end
+
+	for PropertyKey, PropertyValue in pairs(PropertyTable) do
+		if type(PropertyKey) == "number" then
+			if typeof(PropertyValue) == "Instance" then
+				PropertyValue.Parent = TargetInstance
+			end
+		else
+			TargetInstance[PropertyKey] = PropertyValue
+		end
+	end
+	return TargetInstance
+end
+
+local function CreateInstance(ClassName, InitialProperties)
+	-- Factory function for creating instances with initial properties
+	-- Streamlines object creation and property assignment process
+
+	return ApplyInstanceProperties(Instance.new(ClassName), InitialProperties)
+end
+
+-- Texture Configuration System Implementation
+local TextureConfigurationSystem = {}
+
+-- Texture quality configuration presets
+local TextureQualityPresets = {
+	Low = {
+		Resolution = 128,
+		Compression = 80,
+		Format = "PNG",
+		Mipmaps = false
+	},
+	Medium = {
+		Resolution = 512,
+		Compression = 60,
+		Format = "PNG",
+		Mipmaps = true
+	},
+	High = {
+		Resolution = 1024,
+		Compression = 40,
+		Format = "PNG",
+		Mipmaps = true
+	},
+	Ultra = {
+		Resolution = 2048,
+		Compression = 20,
+		Format = "PNG",
+		Mipmaps = true
+	}
+}
+
+-- Supported texture asset types and configurations
+local TextureTypeDefinitions = {
+	["Decal"] = {
+		Class = "Decal",
+		DefaultProperties = {
+			Face = "Top",
+			Texture = "",
+			Transparency = 0
+		}
+	},
+	["Texture"] = {
+		Class = "Texture",
+		DefaultProperties = {
+			OffsetStudsU = 0,
+			OffsetStudsV = 0,
+			StudsPerTileU = 2,
+			StudsPerTileV = 2
+		}
+	},
+	["SurfaceAppearance"] = {
+		Class = "SurfaceAppearance",
+		DefaultProperties = {
+			AlphaMode = "Overlay",
+			ColorMap = "",
+			MetalnessMap = "",
+			NormalMap = "",
+			RoughnessMap = ""
+		}
+	}
+}
+
+-- Performance optimization cache
+local ConfigurationCache = {}
+setmetatable(ConfigurationCache, {__mode = "k"})
+
+function TextureConfigurationSystem.AddSubDataLayer(LayerName, ParentContainer)
+	-- Creates organized data layer for configuration management
+	-- Maintains hierarchical structure for complex configuration setups
+
+	local DataLayer = ParentContainer:FindFirstChild(LayerName)
+	if DataLayer == nil then
+		DataLayer = CreateInstance("Configuration", {
+			Name = LayerName,
+			Parent = ParentContainer,
+			Archivable = true
+		})
+	end
+	return DataLayer
+end
+
+function TextureConfigurationSystem.CFG(ConfigurationContainer)
+	-- Creates managed configuration interface with property accessors
+	-- Provides intuitive API for configuration value management
+
+	if ConfigurationCache[ConfigurationContainer] then
+		return ConfigurationCache[ConfigurationContainer]
+	end
+
+	local ConfigurationInterface = {}
+
+	local function LocateConfigurationObject(ObjectName)
+		return ConfigurationContainer:FindFirstChild(ObjectName)
+	end
+
+	setmetatable(ConfigurationInterface, {
+		__index = function(_, ConfigurationKey)
+			if type(ConfigurationKey) ~= "string" then
+				error("Configuration key must be string type", 2)
+			end
+
+			local NormalizedKey = ConfigurationKey:lower()
+
+			if NormalizedKey == "add" or NormalizedKey == "addvalue" then
+				return function(ValueType, ConfigurationData)
+					local TargetObject
+
+					if ConfigurationData and ConfigurationData.Name and type(ConfigurationData.Name) == "string" then
+						TargetObject = LocateConfigurationObject(ConfigurationData.Name)
+						if TargetObject and TargetObject.ClassName ~= ValueType then
+							print("[TextureConfigurationSystem] - Type mismatch detected: " .. TargetObject.ClassName .. " replaced with " .. ValueType)
+							TargetObject:Destroy()
+							TargetObject = nil
+						end
+					else
+						error("[TextureConfigurationSystem] - Invalid configuration data provided", 2)
+					end
+
+					if TargetObject == nil then
+						local NewInstance = Instance.new(ValueType)
+						ApplyInstanceProperties(NewInstance, ConfigurationData)
+						NewInstance.Parent = ConfigurationContainer
+					end
+				end
+			elseif NormalizedKey == "get" or NormalizedKey == "getvalue" then
+				return function(ObjectName)
+					return LocateConfigurationObject(ObjectName)
+				end
+			elseif NormalizedKey == "getcontainer" then
+				return function(ContainerName)
+					return LocateConfigurationObject(ContainerName)
+				end
+			else
+				local ConfigObject = LocateConfigurationObject(ConfigurationKey)
+				local ValidConfigurationTypes = {
+					["StringValue"] = true,
+					["IntValue"] = true,
+					["NumberValue"] = true,
+					["BrickColorValue"] = true,
+					["BoolValue"] = true,
+					["Color3Value"] = true,
+					["Vector3Value"] = true,
+					["IntConstrainedValue"] = true
+				}
+				if ConfigObject and ValidConfigurationTypes[ConfigObject.ClassName] then
+					return ConfigObject.Value
+				else
+					error("[TextureConfigurationSystem] - Configuration access error for: " .. ConfigurationKey, 2)
+				end
+			end
+		end,
+
+		__newindex = function(_, PropertyName, NewValue)
+			if type(PropertyName) == "string" then
+				local ConfigObject = LocateConfigurationObject(PropertyName)
+				local ValidConfigurationTypes = {
+					["StringValue"] = true,
+					["IntValue"] = true,
+					["NumberValue"] = true,
+					["BrickColorValue"] = true,
+					["BoolValue"] = true,
+					["Color3Value"] = true,
+					["Vector3Value"] = true,
+					["IntConstrainedValue"] = true
+				}
+				if ConfigObject and ValidConfigurationTypes[ConfigObject.ClassName] then
+					ConfigObject.Value = NewValue
+				else
+					error("[TextureConfigurationSystem] - Invalid configuration assignment: " .. PropertyName, 2)
+				end
+			else
+				error("[TextureConfigurationSystem] - Property name must be string type", 2)
+			end
+		end
+	})
+
+	ConfigurationCache[ConfigurationContainer] = ConfigurationInterface
+	return ConfigurationInterface
+end
+
+-- here is Light Management System Implementation and Module Script Requiring
+local RootModel = script.Parent
+local TextureConfiguration = require(script:WaitForChild("TextureConfiguration", 4).Module.Value)
+
+local ConfigurationModel = TextureConfigurationSystem.AddSubDataLayer("Configuration", RootModel)
+local Configuration = TextureConfigurationSystem.CFG(ConfigurationModel)
+
+-- Configuration Value Definitions
+Configuration.AddValue("BoolValue", {
+	Name = "LightsEnabled",
+	Value = true
+})
+
+Configuration.AddValue("BoolValue", {
+	Name = "LightShadows", 
+	Value = true
+})
+
+Configuration.AddValue("IntValue", {
+	Name = "LightRange",
+	Value = 60
+})
+
+Configuration.AddValue("Color3Value", {
+	Name = "LightColor",
+	Value = Color3.new(1, 237/255, 183/255)
+})
+
+Configuration.AddValue("IntValue", {
+	Name = "LightAngle", 
+	Value = 120
+})
+
+Configuration.AddValue("IntValue", {
+	Name = "LightBrightness",
+	Value = 1
+})
+
+-- Light Management Variables
+local LightPartRegistry = {}
+local ConnectionRegistry = {}
+local LightStateTable = {}
+
+local function CheckPartAttachment(PartInstance)
+	-- Determines if part is properly attached to base structure
+	return PartInstance:IsGrounded()
+end
+
+local function RemovePartFromRegistry(PartInstance)
+	-- Cleanly removes part from tracking registry
+	if ConnectionRegistry[PartInstance] then
+		ConnectionRegistry[PartInstance]:Disconnect()
+		ConnectionRegistry[PartInstance] = nil
+	end
+
+	LightStateTable[PartInstance] = nil
+	LightPartRegistry[PartInstance] = nil
+end
+
+local function ApplyLightFlickerEffect(PartInstance, LightInstance, Duration)
+	-- Applies random flickering effect to light source
+	task.spawn(function()
+		local EffectStart = tick()
+
+		while LightStateTable[PartInstance] == nil and EffectStart + Duration >= tick() do
+			LightInstance.Enabled = math.random(1, 2) == 1
+			task.wait(0.1)
+		end
+
+		LightInstance.Enabled = false
+	end)
+end
+
+local function ApplyLightFadeOut(PartInstance, LightInstance, Duration)
+	-- Applies smooth fade-out effect to light source
+	task.spawn(function()
+		local FadeStart = tick()
+		LightInstance.Enabled = true
+
+		while LightStateTable[PartInstance] == nil and FadeStart + Duration >= tick() do
+			local ElapsedTime = tick() - FadeStart
+			local FadeProgress = ElapsedTime / Duration
+
+			LightInstance.Brightness = Configuration.LightBrightness * (1 - FadeProgress)
+			task.wait(0.05)
+		end
+
+		LightInstance.Brightness = 0
+		LightInstance.Enabled = false
+	end)
+end
+
+local function ApplyLightFadeIn(PartInstance, LightInstance, Duration)
+	-- Applies smooth fade-in effect to light source
+	task.spawn(function()
+		local FadeStart = tick()
+		LightInstance.Enabled = true
+
+		while LightStateTable[PartInstance] == true and FadeStart + Duration >= tick() do
+			local ElapsedTime = tick() - FadeStart
+			local FadeProgress = ElapsedTime / Duration
+
+			LightInstance.Brightness = Configuration.LightBrightness * FadeProgress
+			task.wait(0.05)
+		end
+
+		LightInstance.Brightness = Configuration.LightBrightness
+		LightInstance.Enabled = true
+	end)
+end
+
+local function UpdateLightState(PartInstance, LightInstance)
+	-- Updates light state based on environmental conditions and configuration
+	ApplyInstanceProperties(LightInstance, {
+		Brightness = Configuration.LightBrightness,
+		Face = "Bottom",
+		Name = "qSpotLight",
+		Angle = Configuration.LightAngle,
+		Range = Configuration.LightRange,
+		Shadows = Configuration.LightShadows,
+		Color = Configuration.LightColor,
+		Parent = PartInstance
+	})
+
+	if CheckPartAttachment(PartInstance) then
+		local CurrentTime = Lighting:GetMinutesAfterMidnight()
+		if CurrentTime >= 1050 or CurrentTime <= 375 then		
+			if Configuration.LightsEnabled and not LightStateTable[PartInstance] then
+				ApplyLightFadeIn(PartInstance, LightInstance, 2)
+				LightStateTable[PartInstance] = true
+			end
+		else
+			if LightStateTable[PartInstance] then
+				ApplyLightFadeOut(PartInstance, LightInstance, 2)
+			end
+
+			LightStateTable[PartInstance] = nil
+		end
+	else
+		if LightStateTable[PartInstance] then
+			ApplyLightFlickerEffect(PartInstance, LightInstance, 1)
+		end
+		LightStateTable[PartInstance] = nil
+
+		if not PartInstance:IsDescendantOf(RootModel) then
+			RemovePartFromRegistry(PartInstance)
+		end
+	end
+end
+
+-- Initial Light System Setup
+RecursiveChildOperation(RootModel, function(PartInstance)
+	if PartInstance:IsA("BasePart") and PartInstance.Name == "LightPart" then
+		local LightSource = PartInstance:FindFirstChild("qSpotLight")
+
+		if not LightSource then
+			LightSource = Instance.new("SpotLight")
+			LightSource.Enabled = false
+			LightSource.Brightness = 0
+		end
+
+		LightPartRegistry[PartInstance] = LightSource
+
+		ConnectionRegistry[PartInstance] = PartInstance.Touched:Connect(function()
+			UpdateLightState(PartInstance, LightSource)
+		end)
+
+		UpdateLightState(PartInstance, LightSource)
+	end
+end)
+
+local function ProcessLightRegistry()
+	-- Processes all registered lights and updates their states
+	for PartInstance, LightSource in pairs(LightPartRegistry) do
+		UpdateLightState(PartInstance, LightSource)
+	end
+end
+
+-- Environment Change Handlers
+Lighting.Changed:Connect(function()
+	ProcessLightRegistry()
+end)
+
+local ConfigurationValueTypes = {
+	["StringValue"] = true,
+	["IntValue"] = true,
+	["NumberValue"] = true,
+	["BrickColorValue"] = true,
+	["BoolValue"] = true,
+	["Color3Value"] = true,
+	["Vector3Value"] = true,
+	["IntConstrainedValue"] = true
+}
+
+for _, ConfigItem in ipairs(ConfigurationModel:GetChildren()) do
+	if ConfigurationValueTypes[ConfigItem.ClassName] then
+		ConfigItem.Changed:Connect(function()
+			ProcessLightRegistry()
+		end)
+	end
+end
+
+return TextureConfigurationSystem]]></ProtectedString>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<token name="RunContext">0</token>
+						<string name="ScriptGuid">{F9940C02-01D7-4297-AF8A-CCA0CB00ACD0}</string>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Package</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags">Q3JlZGl0czpAcmV3cQ==</BinaryString>
+					</Properties>
+					<Item class="ModuleScript" referent="RBXC67F311C56AD4A4AA01C6888319767D0">
+						<Properties>
+							<Content name="LinkedSource"><null></null></Content>
+							<ProtectedString name="Source"><![CDATA[-- AppearanceSetupuration Module
+-- This system provides automated texture creation, analysis, and optimization
+-- Features include: dynamic texture generation, quality enhancement, memory optimization,
+-- and intelligent texture distribution across game assets
+
+local TextureConfiguration = {}
+
+-- Texture quality presets for different performance requirements
+local TEXTURE_PRESETS = {
+	Low = {
+		Resolution = 128,
+		Compression = 80,
+		Format = "PNG",
+		Mipmaps = false
+	},
+	Medium = {
+		Resolution = 512,
+		Compression = 60,
+		Format = "PNG",
+		Mipmaps = true
+	},
+	High = {
+		Resolution = 1024,
+		Compression = 40,
+		Format = "PNG",
+		Mipmaps = true
+	},
+	Ultra = {
+		Resolution = 2048,
+		Compression = 20,
+		Format = "PNG",
+		Mipmaps = true
+	}
+}
+
+-- Supported texture types and their default properties
+local SUPPORTED_TEXTURE_TYPES = {
+	["Decal"] = {
+		Class = "Decal",
+		DefaultProperties = {
+			Face = "Top",
+			Texture = "",
+			Transparency = 0
+		}
+	},
+	["Texture"] = {
+		Class = "Texture",
+		DefaultProperties = {
+			OffsetStudsU = 0,
+			OffsetStudsV = 0,
+			StudsPerTileU = 2,
+			StudsPerTileV = 2
+		}
+	},
+	["SurfaceAppearance"] = {
+		Class = "SurfaceAppearance",
+		DefaultProperties = {
+			AlphaMode = "Overlay",
+			ColorMap = "",
+			MetalnessMap = "",
+			NormalMap = "",
+			RoughnessMap = ""
+		}
+	}
+}
+
+-- Cache for texture configurations to avoid redundant operations
+local TextureCache = {}
+setmetatable(TextureCache, {__mode = "k"})
+
+-- Internal utility functions
+local function ApplyProperties(target, properties)
+	-- Applies a table of properties to a Roblox instance
+	assert(type(properties) == "table", "Properties must be a table")
+
+	for property, value in pairs(properties) do
+		if type(property) == "number" then
+			-- Handle child objects
+			if typeof(value) == "Instance" then
+				value.Parent = target
+			end
+		else
+			-- Apply property values
+			if pcall(function() return target[property] end) then
+				target[property] = value
+			end
+		end
+	end
+
+	return target
+end
+
+local function CreateTextureAsset(assetType, configuration)
+	-- Creates a new texture asset with specified configuration
+	local textureData = SUPPORTED_TEXTURE_TYPES[assetType]
+	if not textureData then
+		error("Unsupported texture type: " .. tostring(assetType), 2)
+	end
+
+	local newAsset = Instance.new(textureData.Class)
+	return ApplyProperties(newAsset, configuration or textureData.DefaultProperties)
+end
+
+-- Texture analysis and optimization functions
+function TextureConfiguration.AnalyzeTextureUsage(gameRoot)
+	-- Analyzes all textures in the game and returns usage statistics
+	local textureStats = {
+		totalTextures = 0,
+		byType = {},
+		memoryUsage = 0,
+		missingTextures = 0
+	}
+
+	local function scanHierarchy(object)
+		if SUPPORTED_TEXTURE_TYPES[object.ClassName] then
+			textureStats.totalTextures = textureStats.totalTextures + 1
+			textureStats.byType[object.ClassName] = (textureStats.byType[object.ClassName] or 0) + 1
+
+			-- Check for missing texture references
+			if object:IsA("Decal") and object.Texture == "" then
+				textureStats.missingTextures = textureStats.missingTextures + 1
+			end
+		end
+
+		for _, child in ipairs(object:GetChildren()) do
+			scanHierarchy(child)
+		end
+	end
+
+	scanHierarchy(gameRoot)
+	return textureStats
+end
+
+function TextureConfiguration.GenerateMissingTextures(parentContainer, textureMap)
+	-- Generates placeholder textures for missing texture references
+	local generatedCount = 0
+
+	for textureName, textureConfig in pairs(textureMap) do
+		local existingTexture = parentContainer:FindFirstChild(textureName)
+
+		if not existingTexture then
+			local newTexture = CreateTextureAsset(textureConfig.Type, textureConfig.Properties)
+			newTexture.Name = textureName
+			newTexture.Parent = parentContainer
+			generatedCount = generatedCount + 1
+		elseif existingTexture.ClassName ~= textureConfig.Type then
+			warn("[TextureConfiguration] - Texture type mismatch for '" .. textureName .. "'. Expected: " .. textureConfig.Type .. ", Found: " .. existingTexture.ClassName)
+		end
+	end
+
+	print("[TextureConfiguration] - Generated " .. generatedCount .. " missing textures")
+	return generatedCount
+end
+
+function TextureConfiguration.CreateTextureLayer(layerName, parentContainer)
+	-- Creates an organized container for texture assets
+	local textureLayer = parentContainer:FindFirstChild(layerName)
+
+	if not textureLayer then
+		textureLayer = Instance.new("Folder")
+		textureLayer.Name = layerName
+		textureLayer.Archivable = false
+		textureLayer.Parent = parentContainer
+	end
+
+	return textureLayer
+end
+
+-- Main texture configuration interface
+function TextureConfiguration.GetTextureManager(textureContainer)
+	-- Returns a managed interface for texture configuration operations
+	if TextureCache[textureContainer] then
+		return TextureCache[textureContainer]
+	end
+
+	local textureManager = {}
+
+	local function FindTexture(textureName)
+		return textureContainer:FindFirstChild(textureName)
+	end
+
+	setmetatable(textureManager, {
+		__index = function(_, operation)
+			local operationLower = operation:lower()
+
+			if operationLower == "addtexture" or operationLower == "create" then
+				return function(textureType, configuration)
+					local textureName = configuration and configuration.Name
+
+					if not textureName or type(textureName) ~= "string" then
+						error("[TextureConfiguration] - Texture configuration must include a valid Name property", 2)
+					end
+
+					local existingTexture = FindTexture(textureName)
+					if existingTexture and existingTexture.ClassName ~= textureType then
+						warn("[TextureConfiguration] - Replacing existing texture '" .. textureName .. "' of type " .. existingTexture.ClassName .. " with new type " .. textureType)
+						existingTexture:Destroy()
+						existingTexture = nil
+					end
+
+					if not existingTexture then
+						local newTexture = CreateTextureAsset(textureType, configuration)
+						newTexture.Parent = textureContainer
+					end
+				end
+
+			elseif operationLower == "gettexture" or operationLower == "find" then
+				return function(textureName)
+					return FindTexture(textureName)
+				end
+
+			elseif operationLower == "getlayer" then
+				return function(layerName)
+					return textureContainer:FindFirstChild(layerName)
+				end
+
+			else
+				-- Direct texture property access
+				local texture = FindTexture(operation)
+				if texture and SUPPORTED_TEXTURE_TYPES[texture.ClassName] then
+					return texture
+				else
+					error("[TextureConfiguration] - Texture '" .. operation .. "' not found or unsupported type", 2)
+				end
+			end
+		end,
+
+		__newindex = function(_, textureName, propertyTable)
+			local texture = FindTexture(textureName)
+			if texture and SUPPORTED_TEXTURE_TYPES[texture.ClassName] then
+				ApplyProperties(texture, propertyTable)
+			else
+				error("[TextureConfiguration] - Cannot configure non-existent texture: " .. textureName, 2)
+			end
+		end
+	})
+
+	TextureCache[textureContainer] = textureManager
+	return textureManager
+end
+
+-- Quality optimization functions
+function TextureConfiguration.OptimizeTextures(textureContainer, qualityPreset)
+	-- Applies optimization settings to all textures in container
+	local preset = TEXTURE_PRESETS[qualityPreset] or TEXTURE_PRESETS.Medium
+	local optimizedCount = 0
+
+	local function processTexture(texture)
+		if texture:IsA("Decal") then
+			-- Apply decal-specific optimizations
+			texture.ZIndex = preset.Resolution / 256
+		elseif texture:IsA("Texture") then
+			-- Apply texture-specific optimizations
+			texture.StudsPerTileU = math.max(1, preset.Resolution / 512)
+			texture.StudsPerTileV = math.max(1, preset.Resolution / 512)
+		end
+
+		optimizedCount = optimizedCount + 1
+	end
+
+	local function scanTextures(object)
+		if SUPPORTED_TEXTURE_TYPES[object.ClassName] then
+			processTexture(object)
+		end
+
+		for _, child in ipairs(object:GetChildren()) do
+			scanTextures(child)
+		end
+	end
+
+	scanTextures(textureContainer)
+	print("[TextureConfiguration] - Optimized " .. optimizedCount .. " textures with " .. qualityPreset .. " preset")
+	return optimizedCount
+end
+
+function TextureConfiguration.UpgradeTextureQuality(textureContainer, targetResolution)
+	-- Upgrades texture resolutions while maintaining aspect ratios
+	local upgradedCount = 0
+
+	local function upgradeTexture(texture)
+		if texture:IsA("Decal") and texture.Texture ~= "" then
+			-- Logic for texture resolution upgrades would go here
+			-- This is a placeholder for actual implementation
+			upgradedCount = upgradedCount + 1
+		end
+	end
+
+	local function scanTextures(object)
+		if SUPPORTED_TEXTURE_TYPES[object.ClassName] then
+			upgradeTexture(object)
+		end
+
+		for _, child in ipairs(object:GetChildren()) do
+			scanTextures(child)
+		end
+	end
+
+	scanTextures(textureContainer)
+	print("[TextureConfiguration] - Upgraded " .. upgradedCount .. " textures to " .. targetResolution .. " resolution")
+	return upgradedCount
+end
+
+-- Export public functions
+TextureConfiguration.CreateLayer = TextureConfiguration.CreateTextureLayer
+TextureConfiguration.GetManager = TextureConfiguration.GetTextureManager
+TextureConfiguration.Analyze = TextureConfiguration.AnalyzeTextureUsage
+TextureConfiguration.GenerateMissing = TextureConfiguration.GenerateMissingTextures
+TextureConfiguration.Optimize = TextureConfiguration.OptimizeTextures
+TextureConfiguration.Upgrade = TextureConfiguration.UpgradeTextureQuality
+
+return TextureConfiguration]]></ProtectedString>
+							<string name="ScriptGuid">{6BBB3409-FC3A-4E2D-97E4-043D0E79857B}</string>
+							<BinaryString name="AttributesSerialize">AQAAAAcAAABWZXJzaW9uAg8AAAAxMTUxODg0ODc1MjgxMTI=</BinaryString>
+							<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+							<bool name="DefinesCapabilities">false</bool>
+							<string name="Name">TextureConfiguration</string>
+							<int64 name="SourceAssetId">-1</int64>
+							<BinaryString name="Tags">Q3JlZGl0czpAcmV3cQ==</BinaryString>
+						</Properties>
+						<Item class="NumberPose" referent="RBXFDBD7A9768824A74831062F0FF3AF19B">
+							<Properties>
+								<double name="Value">71773222643933</double>
+								<token name="EasingDirection">0</token>
+								<token name="EasingStyle">0</token>
+								<float name="Weight">1</float>
+								<BinaryString name="AttributesSerialize"></BinaryString>
+								<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+								<bool name="DefinesCapabilities">false</bool>
+								<string name="Name">Module</string>
+								<int64 name="SourceAssetId">-1</int64>
+								<BinaryString name="Tags">Q3JlZGl0czpAcmV3cQ==</BinaryString>
+							</Properties>
+						</Item>
+					</Item>
+				</Item>
+			</Item>
+			<Item class="Sky" referent="RBXFA078735A01D4583AAD0AFC942D14D37">
+				<Properties>
+					<bool name="CelestialBodiesShown">true</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+					<Content name="SkyboxBk"><url>rbxassetid://5084575798</url></Content>
+					<Content name="SkyboxDn"><url>rbxassetid://5084575916</url></Content>
+					<Content name="SkyboxFt"><url>rbxassetid://5103949679</url></Content>
+					<Content name="SkyboxLf"><url>rbxassetid://5103948542</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>rbxassetid://5103948784</url></Content>
+					<Content name="SkyboxUp"><url>rbxassetid://5084576400</url></Content>
+					<int name="StarCount">3000</int>
+					<float name="SunAngularSize">21</float>
+					<Content name="SunTextureId"><url>rbxasset://sky/sun.jpg</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Sky</string>
+					<int64 name="SourceAssetId">116090873653606</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Folder" referent="RBX07288321222848E895DCDB8B0715D057">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Electrical Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="Atmosphere" referent="RBXF90EDC59EBAA4C7D8A635250481A256C">
+				<Properties>
+					<Color3 name="Color">
+						<R>0.0980392173</R>
+						<G>0.0980392173</G>
+						<B>0.137254909</B>
+					</Color3>
+					<Color3 name="Decay">
+						<R>0</R>
+						<G>0</G>
+						<B>0</B>
+					</Color3>
+					<float name="Density">0.379000008</float>
+					<float name="Glare">1.14999998</float>
+					<float name="Haze">2.75999999</float>
+					<float name="Offset">1</float>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Atmosphere</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Sky" referent="RBX5402BA9452CD48A9B47497E39FF542C4">
+				<Properties>
+					<bool name="CelestialBodiesShown">true</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+					<Content name="SkyboxBk"><url>http://www.roblox.com/asset/?id=136224297</url></Content>
+					<Content name="SkyboxDn"><url>http://www.roblox.com/asset/?id=136223344</url></Content>
+					<Content name="SkyboxFt"><url>http://www.roblox.com/asset/?id=136224385</url></Content>
+					<Content name="SkyboxLf"><url>http://www.roblox.com/asset/?id=136224237</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>http://www.roblox.com/asset/?id=136224338</url></Content>
+					<Content name="SkyboxUp"><url>http://www.roblox.com/asset/?id=136225325</url></Content>
+					<int name="StarCount">5000</int>
+					<float name="SunAngularSize">21</float>
+					<Content name="SunTextureId"><url>rbxasset://sky/sun.jpg</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Sky</string>
+					<int64 name="SourceAssetId">190477780</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BloomEffect" referent="RBX7ABFFB964FB14AC58B34B05891351138">
+				<Properties>
+					<float name="Intensity">0.800000012</float>
+					<float name="Size">20</float>
+					<float name="Threshold">0.899999976</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Bloom</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BlurEffect" referent="RBX9BD1AB870B264A3C9B575EBF42A9C774">
+				<Properties>
+					<float name="Size">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Blur</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ColorCorrectionEffect" referent="RBX9C945CFE4A69472E81467556EC760466">
+				<Properties>
+					<float name="Brightness">0.0799999982</float>
+					<float name="Contrast">0.100000001</float>
+					<float name="Saturation">0.200000003</float>
+					<Color3 name="TintColor">
+						<R>0.941176474</R>
+						<G>0.960784316</G>
+						<B>1</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="DepthOfFieldEffect" referent="RBX3ABFB02D85954CBCA7AA7A44C942E831">
+				<Properties>
+					<float name="FarIntensity">0.0469999984</float>
+					<float name="FocusDistance">0.0500000007</float>
+					<float name="InFocusRadius">10</float>
+					<float name="NearIntensity">0.75</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">DepthOfField</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="SunRaysEffect" referent="RBX1FEA9DADE1AE4A888F913B5E404318C2">
+				<Properties>
+					<float name="Intensity">0.0500000007</float>
+					<float name="Spread">0.100000001</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">SunRays</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Configuration" referent="RBX96ECC838051F423E8F714952E38B7492">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">BubbleGum Configuration</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Color3Value" referent="RBX3A44AC57283F47C889FAF20825E3930E">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.156862751</R>
+							<G>0.156862751</G>
+							<B>0.196078435</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_OutdoorAmbient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="NumberValue" referent="RBXC7D4B572B34C4DFCB0AA36CE4CDC3D1E">
+					<Properties>
+						<double name="Value">0</double>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Exposure_Compensation</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXF0B8E55F917846AD8495229F17982A61">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_EnvironmentSpecularScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX6167BB5E432E4DAB818AA53684D55BB9">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_EnvironmentDiffuseScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX3C986476375248F8B7933234F185D4FC">
+					<Properties>
+						<Color3 name="Value">
+							<R>0</R>
+							<G>0</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_ColorShift_Top</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBXCF0A4EC6D8584D598AFCB8813BEF00C7">
+					<Properties>
+						<Color3 name="Value">
+							<R>0</R>
+							<G>0</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_ColorShift_Bottom</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXA04E61BECFDE46B88DC3B5BD0D18BF00">
+					<Properties>
+						<int64 name="Value">0</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Brightness</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX1086C930156246739838E1D1A390E89A">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.137254909</R>
+							<G>0.137254909</G>
+							<B>0.176470593</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Ambient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Folder" referent="RBX200E4F2777F5419180A8FEF029DA59A0">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Ice Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="Configuration" referent="RBXBE3416D0E8D544E38B987B5A46744DD2">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Ice Configuration</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Color3Value" referent="RBX292793B2F33046558EBF9CEC836B70BB">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.392156869</R>
+							<G>0.431372553</G>
+							<B>0.509803951</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Ambient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX219604C389344188A7E9F63E5FDFA807">
+					<Properties>
+						<int64 name="Value">0</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Brightness</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX46D941E0F6B3466BA268DE4892ED795B">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.627451003</R>
+							<G>0.431372553</G>
+							<B>0.313725501</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_ColorShift_Bottom</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBXDBF5C960FE3F443C8E0BA807728E440F">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.784313738</R>
+							<G>0.882352948</G>
+							<B>1</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_ColorShift_Top</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX3B1FADE18E074F57B1532AC30A3F6ED7">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_EnvironmentDiffuseScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXBC8A06FEA5C04B27944CBDE4BE156609">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_EnvironmentSpecularScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="NumberValue" referent="RBX91090E92BBD24FDFA4D8BE1FCC728B90">
+					<Properties>
+						<double name="Value">0</double>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_Exposure_Compensation</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBXF44411953616441F9D23A64DDBA7A576">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.274509817</R>
+							<G>0.313725501</G>
+							<B>0.392156869</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">BubbleGum_OutdoorAmbient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SunRaysEffect" referent="RBX97DC26CD469F40A385ED8D43F67A9435">
+				<Properties>
+					<float name="Intensity">0.0500000007</float>
+					<float name="Spread">0.100000001</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">SunRays</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="DepthOfFieldEffect" referent="RBX0E3647D6123E4C7FA5F03C36B1462431">
+				<Properties>
+					<float name="FarIntensity">0.0469999984</float>
+					<float name="FocusDistance">0.0500000007</float>
+					<float name="InFocusRadius">10</float>
+					<float name="NearIntensity">0.75</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">DepthOfField</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ColorCorrectionEffect" referent="RBX0087EF2F232348A4B884624C4997137B">
+				<Properties>
+					<float name="Brightness">0.0700000003</float>
+					<float name="Contrast">0.100000001</float>
+					<float name="Saturation">0.200000003</float>
+					<Color3 name="TintColor">
+						<R>0.90196079</R>
+						<G>0.941176474</G>
+						<B>1</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BlurEffect" referent="RBX3D90A267A29940508EEA10AC9175093C">
+				<Properties>
+					<float name="Size">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Blur</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BloomEffect" referent="RBXEE55D99871414E0C9DA9F93DA325A284">
+				<Properties>
+					<float name="Intensity">0.100000001</float>
+					<float name="Size">12</float>
+					<float name="Threshold">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Bloom</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Sky" referent="RBX3B3A5F2835B34C738FABA1411F8B8960">
+				<Properties>
+					<bool name="CelestialBodiesShown">false</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+					<Content name="SkyboxBk"><url>http://www.roblox.com/asset/?id=155657655</url></Content>
+					<Content name="SkyboxDn"><url>http://www.roblox.com/asset/?id=155674246</url></Content>
+					<Content name="SkyboxFt"><url>http://www.roblox.com/asset/?id=155657609</url></Content>
+					<Content name="SkyboxLf"><url>http://www.roblox.com/asset/?id=155657671</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>http://www.roblox.com/asset/?id=155657619</url></Content>
+					<Content name="SkyboxUp"><url>http://www.roblox.com/asset/?id=155674931</url></Content>
+					<int name="StarCount">3000</int>
+					<float name="SunAngularSize">21</float>
+					<Content name="SunTextureId"><url>rbxasset://sky/sun.jpg</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Snow Skybox</string>
+					<int64 name="SourceAssetId">4604073339</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Atmosphere" referent="RBX6E45C58B8BA74234B02750C5863D389E">
+				<Properties>
+					<Color3 name="Color">
+						<R>0.70588237</R>
+						<G>0.784313738</G>
+						<B>0.862745106</B>
+					</Color3>
+					<Color3 name="Decay">
+						<R>0.392156869</R>
+						<G>0.588235319</G>
+						<B>0.980392158</B>
+					</Color3>
+					<float name="Density">0.398999989</float>
+					<float name="Glare">0.5</float>
+					<float name="Haze">2.4000001</float>
+					<float name="Offset">0.0930000022</float>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Atmosphere</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Folder" referent="RBXB7A6F0E74F864B2CABB14F1050BFF014">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Solar Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="Configuration" referent="RBX61B8F14E16574BC493E5C4CD2568C50E">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Solar Configuration</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Color3Value" referent="RBX26E31A5457DE4D1FAD0BF086ECA43355">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.70588237</R>
+							<G>0.549019635</G>
+							<B>0.392156869</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_OutdoorAmbient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="NumberValue" referent="RBXFC11E90E10EC4B11B8332AC32C437DF9">
+					<Properties>
+						<double name="Value">0</double>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_Exposure_Compensation</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX1BEB051C39894C299D0CCED3B569B5D0">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_EnvironmentSpecularScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXADC729A3461144B3ADE66A99640E3191">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_EnvironmentDiffuseScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBXBCA21A4A1B944720A2788132B2BB4197">
+					<Properties>
+						<Color3 name="Value">
+							<R>1</R>
+							<G>0.666666687</G>
+							<B>0.431372553</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_ColorShift_Top</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX2706E8ED96B947DBB032E291BB976D91">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.627451003</R>
+							<G>0.431372553</G>
+							<B>0.313725501</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_ColorShift_Bottom</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXAD48E0FB5B664CBFBFDF76BFC2787C8B">
+					<Properties>
+						<int64 name="Value">0</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_Brightness</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX1BA51A4F1DDE48BFB2E51C246C393D5A">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.509803951</R>
+							<G>0.470588267</G>
+							<B>0.258823544</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Solar_Ambient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Sky" referent="RBXC82FDEB0F09B4B2996F93AB57E472C9C">
+				<Properties>
+					<bool name="CelestialBodiesShown">true</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+					<Content name="SkyboxBk"><url>rbxasset://textures/sky/sky512_bk.tex</url></Content>
+					<Content name="SkyboxDn"><url>rbxasset://textures/sky/sky512_dn.tex</url></Content>
+					<Content name="SkyboxFt"><url>rbxasset://textures/sky/sky512_ft.tex</url></Content>
+					<Content name="SkyboxLf"><url>rbxasset://textures/sky/sky512_lf.tex</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>rbxasset://textures/sky/sky512_rt.tex</url></Content>
+					<Content name="SkyboxUp"><url>rbxasset://textures/sky/sky512_up.tex</url></Content>
+					<int name="StarCount">3000</int>
+					<float name="SunAngularSize">21</float>
+					<Content name="SunTextureId"><url>rbxasset://sky/sun.jpg</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Sky</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Atmosphere" referent="RBXBD0B6B965AD84B22824FFF243BB4E83B">
+				<Properties>
+					<Color3 name="Color">
+						<R>0.862745106</R>
+						<G>0.627451003</G>
+						<B>0.431372553</B>
+					</Color3>
+					<Color3 name="Decay">
+						<R>0.784313738</R>
+						<G>0.549019635</G>
+						<B>0.352941185</B>
+					</Color3>
+					<float name="Density">0.5</float>
+					<float name="Glare">0.5</float>
+					<float name="Haze">2.5</float>
+					<float name="Offset">0.25</float>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Atmosphere</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BloomEffect" referent="RBX7436600E00B148EA89804467845CA481">
+				<Properties>
+					<float name="Intensity">0.200000003</float>
+					<float name="Size">12</float>
+					<float name="Threshold">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Bloom</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BlurEffect" referent="RBX616C889DE0CC40C59D57FDDBE9A63A0F">
+				<Properties>
+					<float name="Size">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Blur</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ColorCorrectionEffect" referent="RBX205F45A956024677941A930179BAC7BE">
+				<Properties>
+					<float name="Brightness">6.7055228e-10</float>
+					<float name="Contrast">0.150000006</float>
+					<float name="Saturation">0.300000012</float>
+					<Color3 name="TintColor">
+						<R>1</R>
+						<G>0.882352948</G>
+						<B>0.745098054</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="DepthOfFieldEffect" referent="RBX55EA980799A6473CAAD193D14EF9D5C7">
+				<Properties>
+					<float name="FarIntensity">0.0469999984</float>
+					<float name="FocusDistance">0.0500000007</float>
+					<float name="InFocusRadius">10</float>
+					<float name="NearIntensity">0.75</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">DepthOfField</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="SunRaysEffect" referent="RBXC47084D66AEA4A8EA6403F3256B47E10">
+				<Properties>
+					<float name="Intensity">0.0500000007</float>
+					<float name="Spread">0.400000006</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">SunRays</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Folder" referent="RBX8DB5E5DD2E6941A2AE996A8AB44A2666">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Spectral Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="SunRaysEffect" referent="RBX93B04221A27D4A35A0F12E7ECB39C1E9">
+				<Properties>
+					<float name="Intensity">0.0199999996</float>
+					<float name="Spread">1</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">SunRays</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="DepthOfFieldEffect" referent="RBXC7C7C1817AB94D5590A748D8D68A7893">
+				<Properties>
+					<float name="FarIntensity">0.0469999984</float>
+					<float name="FocusDistance">0.0500000007</float>
+					<float name="InFocusRadius">10</float>
+					<float name="NearIntensity">0.75</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">DepthOfField</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ColorCorrectionEffect" referent="RBXEA4743BF3253429EB421B6D06875A502">
+				<Properties>
+					<float name="Brightness">0.0599999987</float>
+					<float name="Contrast">0.300000012</float>
+					<float name="Saturation">0.400000006</float>
+					<Color3 name="TintColor">
+						<R>0.70588237</R>
+						<G>1</G>
+						<B>0.784313738</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BlurEffect" referent="RBX3C924C4D50FE45EF865D3AE2F6ED63F8">
+				<Properties>
+					<float name="Size">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Blur</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BloomEffect" referent="RBXC2B6E412C7CB4F41A10CD341F30B1B19">
+				<Properties>
+					<float name="Intensity">0.800000012</float>
+					<float name="Size">40</float>
+					<float name="Threshold">1.73800004</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Bloom</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Sky" referent="RBX34DD29A2A8924CE1933AB3D00881E5AD">
+				<Properties>
+					<bool name="CelestialBodiesShown">true</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxassetid://6444320592</url></Content>
+					<Content name="SkyboxBk"><url>rbxassetid://6444884337</url></Content>
+					<Content name="SkyboxDn"><url>rbxassetid://6444884785</url></Content>
+					<Content name="SkyboxFt"><url>rbxassetid://6444884337</url></Content>
+					<Content name="SkyboxLf"><url>rbxassetid://6444884337</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>rbxassetid://6444884337</url></Content>
+					<Content name="SkyboxUp"><url>rbxassetid://6412503613</url></Content>
+					<int name="StarCount">3000</int>
+					<float name="SunAngularSize">11</float>
+					<Content name="SunTextureId"><url>rbxassetid://6196665106</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Sky</string>
+					<int64 name="SourceAssetId">332039975</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Atmosphere" referent="RBXD0C9FB8075AC4800BAD3E70799DE6A1A">
+				<Properties>
+					<Color3 name="Color">
+						<R>0.0588235296</R>
+						<G>0.117647059</G>
+						<B>0.0784313753</B>
+					</Color3>
+					<Color3 name="Decay">
+						<R>0</R>
+						<G>0.333333343</G>
+						<B>0</B>
+					</Color3>
+					<float name="Density">0.430000007</float>
+					<float name="Glare">0</float>
+					<float name="Haze">0</float>
+					<float name="Offset">0.140000001</float>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Atmosphere</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Configuration" referent="RBXDDD9EC3E214D438C9C3F8BEBE067423E">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Spectral Configuration</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Color3Value" referent="RBXCEBE1F3F126D45078BF2B02E3D4F527C">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.0392156877</R>
+							<G>0.0784313753</G>
+							<B>0.0588235296</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_OutdoorAmbient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="NumberValue" referent="RBXBC75E555D07F432A9A5D67C6DA0F08BC">
+					<Properties>
+						<double name="Value">-0.11000000000000000056</double>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_Exposure_Compensation</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXE5FCF141B9384FABBB1CCBFEC38F078F">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_EnvironmentSpecularScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX08C8D7A884A449A7B9B6C84E35EEAEFD">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_EnvironmentDiffuseScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX85BDBCD8BD1B4BAFBD73435CEC71259A">
+					<Properties>
+						<Color3 name="Value">
+							<R>0</R>
+							<G>0</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_ColorShift_Top</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBXACA96FBC18B745E4AF7D1735C09A50D6">
+					<Properties>
+						<Color3 name="Value">
+							<R>0</R>
+							<G>0</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_ColorShift_Bottom</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXA0F60949535F421880055E4F480F97AC">
+					<Properties>
+						<int64 name="Value">0</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_Brightness</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX3202EB3814D54CF485B9A9C238B3E61C">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.117647059</R>
+							<G>0.196078435</G>
+							<B>0.156862751</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Spectral_Ambient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Folder" referent="RBXCC85D298EC634391A43CC58CD6F6CCF1">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Volcano Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="Configuration" referent="RBX66BBFE9664074F09AC5023651A89B800">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Volcano Configuration</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Color3Value" referent="RBX219C9A724A314959B7B8D394DED59D7E">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.196078435</R>
+							<G>0.0784313753</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_OutdoorAmbient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="NumberValue" referent="RBX14FDA0A9EDE14F62A4AAE94AB463BB34">
+					<Properties>
+						<double name="Value">0</double>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_Exposure_Compensation</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBXD84995972F314E4FAF2E6FE720E5494A">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_EnvironmentSpecularScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX7F357CDF850543F2A35460CDE0B5BA48">
+					<Properties>
+						<int64 name="Value">1</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_EnvironmentDiffuseScale</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX198F97C1D1804706BD05A7698B3B41F1">
+					<Properties>
+						<Color3 name="Value">
+							<R>1</R>
+							<G>0.392156869</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_ColorShift_Top</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBX96BDE2DD491744EDA86C2E5942FEE7F7">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.784313738</R>
+							<G>0.176470593</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_ColorShift_Bottom</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX5B357A9E7840454CA7915A834C73FD91">
+					<Properties>
+						<int64 name="Value">2</int64>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_Brightness</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+				<Item class="Color3Value" referent="RBXCE1F8A23692F48F0B3B258ED4F4302DA">
+					<Properties>
+						<Color3 name="Value">
+							<R>0.392156869</R>
+							<G>0.156862751</G>
+							<B>0</B>
+						</Color3>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Volcano_Ambient</string>
+						<int64 name="SourceAssetId">-1</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Sky" referent="RBXBFE02A0769D845F1A2422A8DA988B03B">
+				<Properties>
+					<bool name="CelestialBodiesShown">false</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+					<Content name="SkyboxBk"><url>http://www.roblox.com/asset/?id=415427746</url></Content>
+					<Content name="SkyboxDn"><url>http://www.roblox.com/asset/?id=415436868</url></Content>
+					<Content name="SkyboxFt"><url>http://www.roblox.com/asset/?id=415427746</url></Content>
+					<Content name="SkyboxLf"><url>http://www.roblox.com/asset/?id=415427746</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>http://www.roblox.com/asset/?id=415427746</url></Content>
+					<Content name="SkyboxUp"><url>http://www.roblox.com/asset/?id=281168702</url></Content>
+					<int name="StarCount">3000</int>
+					<float name="SunAngularSize">21</float>
+					<Content name="SunTextureId"><url>rbxasset://sky/sun.jpg</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Volcano Sector Sky</string>
+					<int64 name="SourceAssetId">282825962</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="Atmosphere" referent="RBXECA5AF78B5C84AF18C716234E72A33F1">
+				<Properties>
+					<Color3 name="Color">
+						<R>0.70588237</R>
+						<G>0.196078435</G>
+						<B>0</B>
+					</Color3>
+					<Color3 name="Decay">
+						<R>0.196078435</R>
+						<G>0.0392156877</G>
+						<B>0</B>
+					</Color3>
+					<float name="Density">0.300000012</float>
+					<float name="Glare">1</float>
+					<float name="Haze">2</float>
+					<float name="Offset">0.25</float>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Atmosphere</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BloomEffect" referent="RBXEC3D42A4604649AD8E9150BA25E18E68">
+				<Properties>
+					<float name="Intensity">1.5</float>
+					<float name="Size">24</float>
+					<float name="Threshold">0.800000012</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Bloom</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BlurEffect" referent="RBXE6784B9D65F542E18B189BE9075F3B79">
+				<Properties>
+					<float name="Size">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Blur</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ColorCorrectionEffect" referent="RBXA14DD2CC101B4E72A1CD7D394E5CA22D">
+				<Properties>
+					<float name="Brightness">0.0700000003</float>
+					<float name="Contrast">0.100000001</float>
+					<float name="Saturation">0.200000003</float>
+					<Color3 name="TintColor">
+						<R>1</R>
+						<G>0.941176534</G>
+						<B>0.886274576</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="DepthOfFieldEffect" referent="RBX80A23C5FD2234087B90623931C0CDBC1">
+				<Properties>
+					<float name="FarIntensity">0.0469999984</float>
+					<float name="FocusDistance">0.0500000007</float>
+					<float name="InFocusRadius">10</float>
+					<float name="NearIntensity">0.75</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">DepthOfField</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="SunRaysEffect" referent="RBX48BE70A29ACA4EA3999A7327589629F5">
+				<Properties>
+					<float name="Intensity">0.0500000007</float>
+					<float name="Spread">0.100000001</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">SunRays</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Folder" referent="RBXB2E8472B9A064C95A3D7B869AE2B4679">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<string name="Name">Original Map</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="Sky" referent="RBXF842F771035B48F6983C5F5E5A0163DD">
+				<Properties>
+					<bool name="CelestialBodiesShown">true</bool>
+					<float name="MoonAngularSize">11</float>
+					<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+					<Content name="SkyboxBk"><url>http://www.roblox.com/asset/?id=6778646360</url></Content>
+					<Content name="SkyboxDn"><url>http://www.roblox.com/asset/?id=6778658683</url></Content>
+					<Content name="SkyboxFt"><url>http://www.roblox.com/asset/?id=6778648039</url></Content>
+					<Content name="SkyboxLf"><url>http://www.roblox.com/asset/?id=6778649136</url></Content>
+					<Vector3 name="SkyboxOrientation">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Content name="SkyboxRt"><url>http://www.roblox.com/asset/?id=6778650519</url></Content>
+					<Content name="SkyboxUp"><url>http://www.roblox.com/asset/?id=6778658364</url></Content>
+					<int name="StarCount">5000</int>
+					<float name="SunAngularSize">25</float>
+					<Content name="SunTextureId"><url>rbxassetid://6679618752</url></Content>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">OriginalSky</string>
+					<int64 name="SourceAssetId">6799834843</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+				<Item class="Sky" referent="RBX900F42BB0BB7410BB533AAA3F072ED53">
+					<Properties>
+						<bool name="CelestialBodiesShown">true</bool>
+						<float name="MoonAngularSize">11</float>
+						<Content name="MoonTextureId"><url>rbxasset://sky/moon.jpg</url></Content>
+						<Content name="SkyboxBk"><url>http://www.roblox.com/asset/?id=321846018</url></Content>
+						<Content name="SkyboxDn"><url>http://www.roblox.com/asset/?id=321846104</url></Content>
+						<Content name="SkyboxFt"><url>http://www.roblox.com/asset/?id=321845951</url></Content>
+						<Content name="SkyboxLf"><url>http://www.roblox.com/asset/?id=321846162</url></Content>
+						<Vector3 name="SkyboxOrientation">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+						</Vector3>
+						<Content name="SkyboxRt"><url>http://www.roblox.com/asset/?id=321846207</url></Content>
+						<Content name="SkyboxUp"><url>http://www.roblox.com/asset/?id=321846070</url></Content>
+						<int name="StarCount">3000</int>
+						<float name="SunAngularSize">21</float>
+						<Content name="SunTextureId"><url>rbxasset://sky/sun.jpg</url></Content>
+						<BinaryString name="AttributesSerialize"></BinaryString>
+						<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+						<bool name="DefinesCapabilities">false</bool>
+						<string name="Name">Sea Sky</string>
+						<int64 name="SourceAssetId">321847429</int64>
+						<BinaryString name="Tags"></BinaryString>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Atmosphere" referent="RBXB048FCA62A4C4987ACE114691D328DBA">
+				<Properties>
+					<Color3 name="Color">
+						<R>1</R>
+						<G>1</G>
+						<B>1</B>
+					</Color3>
+					<Color3 name="Decay">
+						<R>0.917647123</R>
+						<G>0.588235319</G>
+						<B>0.129411772</B>
+					</Color3>
+					<float name="Density">0.360000014</float>
+					<float name="Glare">0</float>
+					<float name="Haze">0.00999999978</float>
+					<float name="Offset">0</float>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Atmosphere</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BloomEffect" referent="RBXFC787CAEE09049BD86B217A95A595171">
+				<Properties>
+					<float name="Intensity">0.800000012</float>
+					<float name="Size">40</float>
+					<float name="Threshold">1.73800004</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Bloom</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BlurEffect" referent="RBXFC9A14F6769E4FFEAAE0AB7CDCF54454">
+				<Properties>
+					<float name="Size">2</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">Blur</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="ColorCorrectionEffect" referent="RBX46B2B104AC8345FB8EF49F07C3CDEB88">
+				<Properties>
+					<float name="Brightness">-0.0500000007</float>
+					<float name="Contrast">0.300000012</float>
+					<float name="Saturation">0.400000006</float>
+					<Color3 name="TintColor">
+						<R>1</R>
+						<G>1</G>
+						<B>1</B>
+					</Color3>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">ColorCorrection</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="SunRaysEffect" referent="RBX67E75A8859F64E8A91EA57400EC24C79">
+				<Properties>
+					<float name="Intensity">0.0199999996</float>
+					<float name="Spread">1</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">SunRays</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="DepthOfFieldEffect" referent="RBX8906C58675BA458588E5A08580022894">
+				<Properties>
+					<float name="FarIntensity">0.0469999984</float>
+					<float name="FocusDistance">0.0500000007</float>
+					<float name="InFocusRadius">10</float>
+					<float name="NearIntensity">0.75</float>
+					<bool name="Enabled">true</bool>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<string name="Name">DepthOfField</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+</roblox>

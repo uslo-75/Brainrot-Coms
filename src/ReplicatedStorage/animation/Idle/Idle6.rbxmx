@@ -1,0 +1,6 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+  <Meta name="ExplicitAutoJoints">true</Meta>
+  <External>null</External>
+  <External>nil</External>
+<Item class="Animation" referent="RBXE258AC6033AF4CC08CF6E4652A2D9432"><Properties><Content name="AnimationId"><url>rbxassetid://102722831704517</url></Content><BinaryString name="AttributesSerialize"></BinaryString><SecurityCapabilities name="Capabilities">0</SecurityCapabilities><bool name="DefinesCapabilities">false</bool><string name="Name">Idle6</string><int64 name="SourceAssetId">-1</int64><BinaryString name="Tags"></BinaryString></Properties></Item>
+</roblox>
