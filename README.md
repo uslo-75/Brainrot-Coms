@@ -12,6 +12,18 @@ Projet Roblox type tycoon/collection autour des brainrots, avec architecture Roj
 - Mutations de map serveur avec lighting dedie.
 - Mode `AdminAbuse Disco` avec map speciale, musique playlist, disco ball, NPC danseurs et sky drops.
 
+## Changements recents
+
+- Safe zone compatible avec zones carrees et circulaires.
+- Fix des prompts de modeles pour ne plus disparaitre a cause de la line of sight.
+- Depot auto des brainrots voles en touchant la base.
+- Son de brainrot rejoue globalement au moment du buy.
+- Auto Roll debloque via le groupe `32991977` ou a partir de `100` rolls.
+- Nettoyage des textes casses dans le shop, rebirth et certains noms de brainrots.
+- Transition de map securisee avec ancrage temporaire des joueurs pour eviter les chutes sous la map.
+- Liste de sky drops disco configurable dans `src/ServerStorage/List/DiscoDropList.lua`.
+- Commande de restart local/global ajoutee pour les serveurs.
+
 ## Commandes admin IG
 
 Le projet utilise Cmdr. Les commandes actuellement exposees dans le dossier `Cmdr/Commands` sont :
@@ -19,6 +31,7 @@ Le projet utilise Cmdr. Les commandes actuellement exposees dans le dossier `Cmd
 - `AdminAbuse <Mode> <Scope>` : modes dispo `Normal`, `Disco` ; scope `Local` ou `Global`.
 - `SetMapMutation <Mutation> <Scope>` : mutations de map dispo `Normal`, `BubbleGum`, `Freeze`, `Solar`, `Spectral`, `Volcan`.
 - `LuckServer <LuckBuff> [Time]` : applique un buff de luck global.
+- `RestartServer [Scope]` : restart soft du serveur courant ou de tous les serveurs (`Local` ou `Global`).
 - `AddBrainrot <BrainrotName> <Mutation> [Slots] [Player]` : ajoute un brainrot.
 - `RemoveBrainrot <Position> [Player]` : supprime un brainrot d'un slot.
 - `MoveBrainrot <FromPosition> <ToPosition> [Player]` : deplace ou swap un brainrot.
@@ -31,7 +44,7 @@ Le projet utilise Cmdr. Les commandes actuellement exposees dans le dossier `Cmd
 - `AddCurrency <Currency> <Amount> [Player]` : ajoute ou retire une currency.
 - `SetCurrency <Currency> <Amount> [Player]` : fixe une currency a une valeur precise.
 
-## Config partagée
+## Config partagee
 
 Les principaux parametres de gameplay et de runtime sont centralises dans :
 
@@ -39,6 +52,10 @@ Les principaux parametres de gameplay et de runtime sont centralises dans :
 - `src/ReplicatedStorage/Shared/Config/PlayerSettingsConfig.luau`
 
 Ca permet de modifier plus vite les positions de map, les parametres disco, les prompts, les timeouts, la musique et quelques limites data sans reouvrir chaque script.
+
+Pour le mode Disco, la liste exacte des brainrots qui tombent du ciel est maintenant modifiable ici :
+
+- `src/ServerStorage/List/DiscoDropList.lua`
 
 ## Dev
 

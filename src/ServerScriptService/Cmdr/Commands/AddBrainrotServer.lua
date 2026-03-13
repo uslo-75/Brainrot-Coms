@@ -3,6 +3,7 @@ local BaseModule = require(game.ServerStorage.Module.GameHandler.Base)
 local BrainrotSelect = require(game.ServerStorage.Module.BrainrotSelect)
 local BrainrotList = require(game.ServerStorage.List.BrainrotList)
 local MutationModule = require(game.ServerStorage.Module.RollModule.Mutation)
+local BrainrotDisplayName = require(game.ReplicatedStorage.Module.BrainrotDisplayName)
 
 local function NormalizeLookup(value)
 	return string.lower((tostring(value or "")):gsub("[%s%p_]+", ""))
@@ -77,5 +78,5 @@ return function(context, brainrotName: string, mutation: string, slotcount: numb
 		0
 	)
 
-	return `{player.Name} a recu {brainrotData.Name} ({brainrotData.Mutation}) au slot {positionSelect.Name} avec {slotsCount} slot(s).`
+	return `{player.Name} a recu {BrainrotDisplayName.Get(brainrotData.Name, BrainrotList[brainrotData.Name])} ({brainrotData.Mutation}) au slot {positionSelect.Name} avec {slotsCount} slot(s).`
 end

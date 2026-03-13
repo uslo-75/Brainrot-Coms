@@ -8,6 +8,7 @@ local BaseModule = require(ServerStorage.Module.GameHandler.Base)
 local BrainrotSelect = require(ServerStorage.Module.BrainrotSelect)
 local DataManager = require(ServerStorage.Data.DataManager)
 local BrainrotList = require(ServerStorage.List.BrainrotList)
+local DiscoDropList = require(ServerStorage.List.DiscoDropList)
 local AuraList = require(ServerStorage.List.AuraList)
 local MutationModule = require(ServerStorage.Module.RollModule.Mutation)
 local GameConfig = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"):WaitForChild("GameConfig"))
@@ -39,6 +40,7 @@ local activeState = nil
 local brainrotPool = nil
 local mutationPool = nil
 local auraPool = nil
+local discoDropListWarningShown = false
 
 local function safeDisconnect(connection)
 	if connection then
@@ -302,6 +304,71 @@ local function buildWeightedPool(source, predicate)
 	return pool, totalWeight
 end
 
+local function warnDiscoDropListFallback(message)
+	if discoDropListWarningShown then
+		return
+	end
+
+	discoDropListWarningShown = true
+	warn("[DiscoDropList] " .. message)
+end
+
+local function buildConfiguredDiscoDropPool()
+	local mergedWeights = {}
+	local hasEntries = false
+
+	for index, entry in ipairs(DiscoDropList) do
+		hasEntries = true
+
+		local name = nil
+		local weight = 1
+
+		if typeof(entry) == "string" then
+			name = entry
+		elseif typeof(entry) == "table" then
+			name = entry.Name or entry.Brainrot or entry[1]
+			weight = tonumber(entry.Weight) or 1
+		else
+			warnDiscoDropListFallback(`Invalid entry at index {index}; expected a string or table.`)
+			continue
+		end
+
+		if typeof(name) ~= "string" or name == "" then
+			warnDiscoDropListFallback(`Entry {index} is missing a valid brainrot name.`)
+			continue
+		end
+
+		if not BrainrotList[name] then
+			warnDiscoDropListFallback(`Brainrot "{name}" does not exist in BrainrotList.`)
+			continue
+		end
+
+		if weight <= 0 then
+			warnDiscoDropListFallback(`Brainrot "{name}" has an invalid weight ({tostring(weight)}).`)
+			continue
+		end
+
+		mergedWeights[name] = (mergedWeights[name] or 0) + weight
+	end
+
+	local pool = {}
+	local totalWeight = 0
+
+	for name, weight in pairs(mergedWeights) do
+		totalWeight += weight
+		table.insert(pool, {
+			Name = name,
+			Weight = weight,
+		})
+	end
+
+	table.sort(pool, function(left, right)
+		return left.Name < right.Name
+	end)
+
+	return pool, totalWeight, hasEntries
+end
+
 local function rollFromPool(pool, totalWeight)
 	if not pool or #pool == 0 or not totalWeight or totalWeight <= 0 then
 		return nil
@@ -325,9 +392,17 @@ local function getBrainrotPool()
 		return brainrotPool.Pool, brainrotPool.TotalWeight
 	end
 
-	local pool, totalWeight = buildWeightedPool(BrainrotList, function(_, info)
-		return info and ALLOWED_RARITIES[info.Rarity] == true
-	end)
+	local pool, totalWeight, hasConfiguredEntries = buildConfiguredDiscoDropPool()
+
+	if #pool == 0 then
+		if hasConfiguredEntries then
+			warnDiscoDropListFallback("No valid custom disco drop entries found; falling back to AllowedRarities.")
+		end
+
+		pool, totalWeight = buildWeightedPool(BrainrotList, function(_, info)
+			return info and ALLOWED_RARITIES[info.Rarity] == true
+		end)
+	end
 
 	brainrotPool = {
 		Pool = pool,

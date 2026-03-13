@@ -387,6 +387,7 @@ local function CreateDropPrompt(model)
 	prompt.ObjectText = "Brainrot"
 	prompt.KeyboardKeyCode = Enum.KeyCode.E
 	prompt.HoldDuration = 2
+	prompt:SetAttribute("ForceNoLineOfSight", true)
 	prompt.MaxActivationDistance = GetDropPromptActivationDistance(model)
 	prompt.RequiresLineOfSight = false
 

@@ -9,6 +9,7 @@ local ProximityPrompt = require(script.ProximityPrompt)
 local BrainrotSelect = require(game.ServerStorage.Module.BrainrotSelect)
 local Machine = require(script.Machine)
 local MapMutationManager = require(game.ServerStorage.Module.MapMutationManager)
+local ServerRestartManager = require(game.ServerStorage.Module.ServerRestartManager)
 local ServerLuckManager = require(game.ServerStorage.Module.ServerLuckManager)
 
 local GuiList = require(game.ReplicatedStorage:WaitForChild("List"):WaitForChild("GuiList"))
@@ -17,8 +18,10 @@ local GlobaleEvent = game.ReplicatedStorage.Events.RemoteEvents.GlobaleEvent
 local ServerLuck = game.ServerScriptService.Server.LuckServer
 local GLOBAL_MAP_MUTATION_TOPIC = "GlobalMapMutationEvent"
 local GLOBAL_ADMIN_ABUSE_TOPIC = "GlobalAdminAbuseEvent"
+local GLOBAL_SERVER_RESTART_TOPIC = ServerRestartManager.GLOBAL_TOPIC
 local initialized = false
 local promptWatchStarted = false
+local FORCE_NO_LINE_OF_SIGHT_ATTRIBUTE = "ForceNoLineOfSight"
 
 local function UpdateLuckBuff(player)
 	ServerLuckManager:Init()
@@ -35,6 +38,14 @@ local function Collisiongroup(model, name)
 	end
 end
 
+local function applyPromptLineOfSight(prompt)
+	if not prompt or not prompt:IsA("ProximityPrompt") then
+		return
+	end
+
+	prompt.RequiresLineOfSight = prompt:GetAttribute(FORCE_NO_LINE_OF_SIGHT_ATTRIBUTE) ~= true
+end
+
 local function watchPrompts()
 	if promptWatchStarted then
 		return
@@ -44,14 +55,14 @@ local function watchPrompts()
 	
 	for _, obj in ipairs(workspace:GetDescendants()) do
 		if obj:IsA("ProximityPrompt") then
-			obj.RequiresLineOfSight = true
+			applyPromptLineOfSight(obj)
 		end
 	end
 
 	workspace.DescendantAdded:Connect(function(obj)
 
 		if obj:IsA("ProximityPrompt") then
-			obj.RequiresLineOfSight = true
+			applyPromptLineOfSight(obj)
 		end
 
 	end)
@@ -287,6 +298,18 @@ MessagingService:SubscribeAsync(GLOBAL_ADMIN_ABUSE_TOPIC, function(data)
 		for _, player in ipairs(Players:GetPlayers()) do
 			MessageModule:SendMessage(player, announcement, 2.5, Color3.new(1, 1, 1))
 		end
+	end
+end)
+
+MessagingService:SubscribeAsync(GLOBAL_SERVER_RESTART_TOPIC, function(data)
+	local info = data.Data
+	if not info or info.SourceJobId == game.JobId then
+		return
+	end
+
+	local success, message = ServerRestartManager:RestartLocal(info.ExecutorName or "Console", "Global")
+	if not success then
+		warn("[GlobalServerRestartEvent] Restart failed:", message)
 	end
 end)
 

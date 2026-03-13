@@ -9,6 +9,7 @@ local ServiceTable = {}
 
 local ViewPortModule = require(RP.Module.ViewPortModule)
 local PreviewModel = require(RP.Module.PreviewModel)
+local BrainrotDisplayName = require(RP.Module.BrainrotDisplayName)
 local GuiList = require(RP.List.GuiList)
 
 local PREVIEW_BATCH_SIZE = 8
@@ -490,7 +491,7 @@ function IndexGui:ApplyState(Template, name, mutation)
 	self:StyleTemplate(Template, mutation, isCollected)
 
 	if isCollected then
-		Template:WaitForChild("Name").Text = name
+		Template:WaitForChild("Name").Text = BrainrotDisplayName.Get(name)
 
 		if Template:FindFirstChild("Vf") then
 			Template.Vf.Ambient = Color3.fromRGB(200, 200, 200)

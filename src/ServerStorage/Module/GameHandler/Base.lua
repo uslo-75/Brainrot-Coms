@@ -17,6 +17,7 @@ local ProximityPromptEvent = RP:WaitForChild("Events"):WaitForChild("RemoteEvent
 --//[Modules]//--
 
 local Signal = require(RP.Module.Signal)
+local BrainrotDisplayName = require(RP:WaitForChild("Module"):WaitForChild("BrainrotDisplayName"))
 local BrainrotSelect = require(ServerStorage.Module.BrainrotSelect)
 local UpgradeList = require(ServerStorage.List.UpgradeList)
 local GameConfig = require(RP:WaitForChild("Shared"):WaitForChild("Config"):WaitForChild("GameConfig"))
@@ -35,6 +36,10 @@ local slotPromptConfig = GameConfig.Prompts.BaseSlot
 local SLOT_PROMPT_VERTICAL_OFFSET = slotPromptConfig.VerticalOffset
 local SLOT_PROMPT_FORWARD_OFFSET = slotPromptConfig.ForwardOffset
 local SLOT_PROMPT_MAX_ACTIVATION_DISTANCE = slotPromptConfig.MaxActivationDistance
+
+local function GetBrainrotDisplayName(name)
+	return BrainrotDisplayName.Get(name)
+end
 
 ------------------------------
 -----//Prompt Fonction Brainrot //-----
@@ -143,6 +148,7 @@ local function createPrompt(actionText, parent, duration)
 	prompt.ObjectText = "Brainrot"
 	prompt.KeyboardKeyCode = Enum.KeyCode.E
 	prompt.HoldDuration = duration
+	prompt:SetAttribute("ForceNoLineOfSight", true)
 	prompt.MaxActivationDistance = SLOT_PROMPT_MAX_ACTIVATION_DISTANCE
 	prompt.RequiresLineOfSight = false
 	return prompt
@@ -625,7 +631,7 @@ local function IsDepositCarryState(char)
 	end
 
 	local carryType = char:GetAttribute("Type")
-	return char:GetAttribute("InPlace") ~= true and (carryType == "Buy" or carryType == "Steal")
+	return carryType == "Buy" or carryType == "Steal"
 end
 
 local function IsCharacterInsidePart(char, part)
@@ -640,6 +646,20 @@ local function IsCharacterInsidePart(char, part)
 	end
 
 	return false
+end
+
+local function GetCharacterFromDescendant(instance)
+	local current = instance
+
+	while current do
+		if current:IsA("Model") and current:FindFirstChildOfClass("Humanoid") then
+			return current
+		end
+
+		current = current.Parent
+	end
+
+	return nil
 end
 
 function Base:TryDepositCarriedBrainrot(char)
@@ -683,15 +703,21 @@ function Base:TryDepositCarriedBrainrot(char)
 	)
 
 	if char:GetAttribute("Type") == "Steal" then
-		local PlaceBrainrot = BrainrotSelect:GetPlace(char)
-		if PlaceBrainrot then
-			local owner = PlaceBrainrot:GetAttribute("Owner")
+		local placeBrainrot = BrainrotSelect:GetPlace(char)
+		if placeBrainrot then
+			local owner = placeBrainrot:GetAttribute("Owner")
+			local sourceMode = placeBrainrot:GetAttribute("StealSourceMode") or placeBrainrot:GetAttribute("Mode") or ""
 			local playerFound = Players:FindFirstChild(owner)
+
+			if placeBrainrot.Parent then
+				placeBrainrot.Parent:SetAttribute("Enter", false)
+			end
+
 			if playerFound then
-				ServiceTable["DataManager"].RemoveBrainrot(playerFound, PlaceBrainrot:GetAttribute("Position"))
+				ServiceTable["DataManager"].RemoveBrainrot(playerFound, placeBrainrot:GetAttribute("Position"))
 				MessageModule:SendMessage(
 					playerFound,
-					`{char.Name} has stolen your brainrot {BrairotInfo.Name}`,
+					`{char.Name} has stolen your brainrot {GetBrainrotDisplayName(BrairotInfo.Name)}`,
 					3.5
 				)
 
@@ -699,18 +725,20 @@ function Base:TryDepositCarriedBrainrot(char)
 				local Data = profile and profile.Data
 
 				if Data then
-					if PlaceBrainrot:GetAttribute("Mode") == "AuraSpin" then
+					if sourceMode == "AuraSpin" then
 						ServiceTable["DataManager"]:ClearAuraSpin(playerFound)
 					end
 				else
 					warn("Pas de Data !")
 				end
 			end
-			MessageModule:SendMessage(player, `You are stol {BrairotInfo.Name}`, 2.5)
-			PlaceBrainrot:Destroy()
+
+			MessageModule:SendMessage(player, `You stole {GetBrainrotDisplayName(BrairotInfo.Name)}`, 2.5)
+			placeBrainrot:Destroy()
 		end
+
+		ServiceTable["DataManager"].AddCurrency("Steal", 1, player)
 		char:SetAttribute("InPlace", false)
-		char:SetAttribute("Type", "")
 	end
 
 	ServiceTable["DataManager"].AddIndex(player, BrairotInfo.Name, BrairotInfo.Mutation)
@@ -817,7 +845,7 @@ function Base:ModelAsset()
 			end
 
 			Hitbox.Touched:Connect(function(hit)
-				local char: Model = hit and hit.Parent
+				local char: Model = hit and GetCharacterFromDescendant(hit)
 
 				TryDepositFromCharacterState(char)
 			end)

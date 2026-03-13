@@ -1,4 +1,5 @@
 local Lighting = game:GetService("Lighting")
+local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerStorage = game:GetService("ServerStorage")
 local Workspace = game:GetService("Workspace")
@@ -17,6 +18,7 @@ local GlobalEvent = ReplicatedStorage:WaitForChild("Events"):WaitForChild("Remot
 local MAP_MUTATION_SERVER_LUCK_MULTIPLIER = mapMutationConfig.ServerLuckMultiplier
 local MAP_MUTATION_SERVER_LUCK_DURATION = mapMutationConfig.ServerLuckDuration
 local MAP_TRANSITION_DELAY = mapMutationConfig.TransitionDelay
+local MAP_TRANSITION_SETTLE_DELAY = math.max(MAP_TRANSITION_DELAY + 0.65, 0.75)
 
 local PROTECTED_MAP_CHILDREN = {
 	Base = true,
@@ -153,6 +155,119 @@ local function clearArray(list)
 	for index = #list, 1, -1 do
 		list[index] = nil
 	end
+end
+
+local function getCharacterAnchorPart(character)
+	if not character then
+		return nil
+	end
+
+	local candidates = {
+		character.PrimaryPart,
+		character:FindFirstChild("HumanoidRootPart"),
+		character:FindFirstChild("UpperTorso"),
+		character:FindFirstChild("Torso"),
+		character:FindFirstChildWhichIsA("BasePart"),
+	}
+
+	for _, candidate in ipairs(candidates) do
+		if candidate and candidate:IsA("BasePart") then
+			return candidate
+		end
+	end
+
+	return nil
+end
+
+local function stopCharacterMotion(part)
+	if not (part and part:IsA("BasePart")) then
+		return
+	end
+
+	part.AssemblyLinearVelocity = Vector3.zero
+	part.AssemblyAngularVelocity = Vector3.zero
+end
+
+local function anchorCharacterForTransition(lockState, character)
+	if not (lockState and character) or lockState.CharacterStates[character] then
+		return
+	end
+
+	local anchorPart = getCharacterAnchorPart(character)
+	if not anchorPart then
+		return
+	end
+
+	stopCharacterMotion(anchorPart)
+	lockState.CharacterStates[character] = {
+		Part = anchorPart,
+		WasAnchored = anchorPart.Anchored,
+	}
+	anchorPart.Anchored = true
+end
+
+local function beginTransitionCharacterLock()
+	local lockState = {
+		CharacterStates = {},
+		Connections = {},
+	}
+
+	local function bindPlayer(player)
+		table.insert(lockState.Connections, player.CharacterAdded:Connect(function(character)
+			anchorCharacterForTransition(lockState, character)
+		end))
+
+		if player.Character then
+			anchorCharacterForTransition(lockState, player.Character)
+		end
+	end
+
+	for _, player in ipairs(Players:GetPlayers()) do
+		bindPlayer(player)
+	end
+
+	table.insert(lockState.Connections, Players.PlayerAdded:Connect(bindPlayer))
+
+	return lockState
+end
+
+local function releaseTransitionCharacterLock(lockState)
+	if not lockState then
+		return
+	end
+
+	for character, state in pairs(lockState.CharacterStates) do
+		local anchorPart = state.Part
+		if anchorPart and anchorPart.Parent then
+			stopCharacterMotion(anchorPart)
+			anchorPart.Anchored = state.WasAnchored == true
+		end
+
+		lockState.CharacterStates[character] = nil
+	end
+
+	for _, connection in ipairs(lockState.Connections) do
+		connection:Disconnect()
+	end
+
+	clearArray(lockState.Connections)
+end
+
+local function runMapTransition(callback)
+	local lockState = beginTransitionCharacterLock()
+
+	GlobalEvent:FireAllClients("MapTransition")
+	task.wait(MAP_TRANSITION_DELAY)
+
+	local ok, resultA, resultB = pcall(callback)
+	task.wait(MAP_TRANSITION_SETTLE_DELAY)
+	releaseTransitionCharacterLock(lockState)
+
+	if not ok then
+		return false, tostring(resultA)
+	end
+
+	return resultA, resultB
 end
 
 local function getMapContainer()
@@ -613,12 +728,12 @@ end
 function MapMutationManager:ResetToNormal(clearAllLuckBoosts)
 	self:Init()
 
-	GlobalEvent:FireAllClients("MapTransition")
-	task.wait(MAP_TRANSITION_DELAY)
-	restoreEnvironment()
-	clearLuckBoost(clearAllLuckBoosts)
+	return runMapTransition(function()
+		restoreEnvironment()
+		clearLuckBoost(clearAllLuckBoosts)
 
-	return true, "Map restoree en mode Normal."
+		return true, "Map restoree en mode Normal."
+	end)
 end
 
 function MapMutationManager:ExpireActiveMutation()
@@ -731,14 +846,13 @@ function MapMutationManager:ApplyMutation(mutationName)
 		return false, definitionError
 	end
 
-	GlobalEvent:FireAllClients("MapTransition")
-	task.wait(MAP_TRANSITION_DELAY)
+	return runMapTransition(function()
+		if activeMutation ~= "Normal" then
+			restoreEnvironment()
+		end
 
-	if activeMutation ~= "Normal" then
-		restoreEnvironment()
-	end
-
-	return applyMode(normalizedMutation, definition)
+		return applyMode(normalizedMutation, definition)
+	end)
 end
 
 function MapMutationManager:ApplyAdminAbuse(abuseName)
@@ -767,14 +881,13 @@ function MapMutationManager:ApplyAdminAbuse(abuseName)
 		return false, definitionError
 	end
 
-	GlobalEvent:FireAllClients("MapTransition")
-	task.wait(MAP_TRANSITION_DELAY)
+	return runMapTransition(function()
+		if activeMutation ~= "Normal" then
+			restoreEnvironment()
+		end
 
-	if activeMutation ~= "Normal" then
-		restoreEnvironment()
-	end
-
-	return applyMode(normalizedAbuse, definition)
+		return applyMode(normalizedAbuse, definition)
+	end)
 end
 
 return MapMutationManager

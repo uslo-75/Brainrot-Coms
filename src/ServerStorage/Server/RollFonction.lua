@@ -1,6 +1,8 @@
 local RollFonction = {}
 
+local Debris = game:GetService("Debris")
 local MarketplaceService = game:GetService("MarketplaceService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerStorage = game:GetService("ServerStorage")
 
 local RollModule = require(ServerStorage.Module.RollModule)
@@ -9,12 +11,42 @@ local BrairotSelect = require(ServerStorage.Module.BrainrotSelect)
 local BaseModule = require(ServerStorage.Module.GameHandler.Base)
 local DataManager = require(ServerStorage.Data.DataManager)
 local PassId = require(ServerStorage.List.PassId)
+local BrainrotSoundResolver = require(ReplicatedStorage:WaitForChild("Module"):WaitForChild("BrainrotSoundResolver"))
 
 local RollSelect = setmetatable({}, { __mode = "k" })
 local DB = setmetatable({}, { __mode = "k" })
+local AUTO_ROLL_GROUP_ID = 32991977
 
 local function ClearRollSelection(player)
 	RollSelect[player] = nil
+end
+
+local function PlayGlobalBrainrotSound(char, result)
+	if not (char and result) then
+		return nil
+	end
+
+	local rootPart = char:FindFirstChild("HumanoidRootPart") or char:FindFirstChildWhichIsA("BasePart")
+	if not rootPart then
+		return nil
+	end
+
+	local sound = BrainrotSoundResolver.Resolve(result)
+	if not sound then
+		return nil
+	end
+
+	local soundClone = sound:Clone()
+	soundClone.Looped = false
+	soundClone.Playing = false
+	soundClone.TimePosition = 0
+	soundClone.Parent = rootPart
+
+	local cleanupTime = soundClone.TimeLength > 0 and (soundClone.TimeLength + 2) or 10
+	Debris:AddItem(soundClone, cleanupTime)
+	soundClone:Play()
+
+	return soundClone
 end
 
 local function HasGamePass(player, passName)
@@ -28,6 +60,18 @@ local function HasGamePass(player, passName)
 	end)
 
 	return success and hasPass or false
+end
+
+local function IsInAutoRollGroup(player)
+	if not player or AUTO_ROLL_GROUP_ID <= 0 then
+		return false
+	end
+
+	local success, isMember = pcall(function()
+		return player:IsInGroup(AUTO_ROLL_GROUP_ID)
+	end)
+
+	return success and isMember or false
 end
 
 local function ResolveRollCount(player, requestedCount)
@@ -121,6 +165,10 @@ function RollFonction:Init(player, ...)
 					BrairotSelect:SetInfo(player.Character, result.Name, result.Mutation, SlotTable)
 
 					BrairotSelect:GrabModel(player.Character, NewBrairot)
+					PlayGlobalBrainrotSound(char, {
+						Name = result.Name,
+						Data = itemsInfo,
+					})
 					ClearRollSelection(player)
 					return true
 				else
@@ -164,7 +212,7 @@ function RollFonction:Init(player, ...)
 			return nil
 		end
 
-		if Roll.Value >= 100 then
+		if Roll.Value >= 100 or IsInAutoRollGroup(player) then
 
 			Data.Settings.AutoRoll = not Data.Settings.AutoRoll
 

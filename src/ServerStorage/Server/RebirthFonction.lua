@@ -32,52 +32,51 @@ local function getLeaderstat(player, statName, timeout)
 	return leaderstats:FindFirstChild(statName) or waitForChildQuiet(leaderstats, statName, timeout)
 end
 
-
 function RebirthFonction:Init(player, ...)
-	local Halls = {...}
+	local Halls = { ... }
 	local EventType = Halls[1]
-	
+
 	if EventType == "Rebirth" then
 		local Rebirth = getLeaderstat(player, "Rebirth")
 		local Cash = getLeaderstat(player, "Cash")
 		if not Rebirth or not Cash then
 			return false, "Data is still loading"
 		end
-		
+
 		local List = UpgradeList[tostring(Rebirth.Value + 1)]
-		local BaseSelect = ServerStorage.Base:FindFirstChild(tostring(Rebirth.Value+1))
+		local BaseSelect = ServerStorage.Base:FindFirstChild(tostring(Rebirth.Value + 1))
 		local MyBase = BaseModule.GetBase(player)
-		
+
 		if not MyBase then
 			return nil, "Error to the server sorry !"
 		end
-		
+
 		if not List or not BaseSelect then
 			return nil, "Error to the server sorry !"
 		end
-		
+
 		if Cash.Value < List.Required.Cash then
 			return false, "Need more Cash !"
 		end
-		
+
 		if not DataManager:HassBrairot(player, List.Required.Brainrot) then
 			return false, "You can't rebirth right now !"
 		end
-		
+
 		local profile = DataManager:GetProfile(player)
 		local Data = profile and profile.Data
-		
+
 		if not Data then
 			return nil, "Error to the server sorry !"
 		end
-		
+
 		local Folder = MyBase:Rebrith()
 
 		if not Folder then
-			warn(`Pas de folder trouvÃ© pour le joueur {player.Name}`)
+			warn(`No folder found for player {player.Name}`)
 			return nil, "Error to the server sorry !"
 		end
-		
+
 		if DataManager then
 			Data.Base.Brainrot = {}
 			Data.AuraSpin = {
@@ -90,15 +89,15 @@ function RebirthFonction:Init(player, ...)
 				FuseMode = "None",
 			}
 		end
-		
-		Rebirth.Value +=1
+
+		Rebirth.Value += 1
 		Cash.Value = List.Reward.Cash
 		RemoteEvent:InvokeClient("AuraSpin", player, "Empty")
 		RemoteEvent:InvokeClient("AuraSpin", player, "BrairotPreview", false)
 		RemoteEvent:InvokeClient("FuseEvent", player, "Clear")
-		
+
 		BaseModule.new(player, Data, DataManager)
-		
+
 		return true
 	elseif EventType == "Update" then
 		local Rebirth = getLeaderstat(player, "Rebirth")
@@ -107,14 +106,13 @@ function RebirthFonction:Init(player, ...)
 		end
 
 		local List = UpgradeList[tostring(Rebirth.Value + 1)]
-		
+
 		if List then
 			local value, result = DataManager:HassBrairot(player, List.Required.Brainrot)
 			return value, result or {}
 		end
 		return nil, {}
 	end
-
 end
 
 return RebirthFonction

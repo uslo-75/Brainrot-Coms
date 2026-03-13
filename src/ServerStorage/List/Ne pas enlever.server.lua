@@ -12,7 +12,7 @@ return {
 	["Cacto Hipopotamo"] = { DisplayName = "Cacto Hipopotamo", Price = 80, CashPerSeconde = 8, Rarity = "Commun", Chance = 7.5 };
 	["Bandito Bobritto"] = { DisplayName = "Bandito Bobritto", Price = 120, CashPerSeconde = 12, Rarity = "Commun", Chance = 5 };
 	["Pipi Kiwi"] = { DisplayName = "Pipi Kiwi", Price = 180, CashPerSeconde = 18, Rarity = "Commun", Chance = 4 };
-	["LirilÃ¬ LarilÃ "] = { DisplayName = "LirilÃ¬ LarilÃ ", Price = 250, CashPerSeconde = 25, Rarity = "Commun", Chance = 3.5 };
+	["LirilÃ¬ LarilÃ "] = { DisplayName = "Lirili Larila", Price = 250, CashPerSeconde = 25, Rarity = "Commun", Chance = 3.5 };
 	["Noobini Pizzanini"] = { DisplayName = "Noobini Pizzanini", Price = 350, CashPerSeconde = 35, Rarity = "Commun", Chance = 3 };
 	["Pipi Corni"] = { DisplayName = "Pipi Corni", Price = 450, CashPerSeconde = 45, Rarity = "Commun", Chance = 2.5 };
 	["Fluriflura"] = { DisplayName = "Fluriflura", Price = 600, CashPerSeconde = 60, Rarity = "Commun", Chance = 2 };

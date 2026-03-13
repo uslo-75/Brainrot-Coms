@@ -7,6 +7,7 @@ local myServices = require(RP:WaitForChild("MyService"):WaitForChild("MyService"
 local BrainrotSelect = require(game.ServerStorage.Module.BrainrotSelect)
 local DataManager = require(game.ServerStorage.Data.DataManager)
 local BaseModule = require(game.ServerStorage.Module.GameHandler.Base)
+local BrainrotDisplayName = require(RP:WaitForChild("Module"):WaitForChild("BrainrotDisplayName"))
 local BrainrotList = require(game.ServerStorage.List.BrainrotList)
 local MessageModule = require(game.ReplicatedStorage.Module.MessageModule)
 
@@ -16,6 +17,11 @@ local Triggered = {}
 local DB = {}
 local StealInfo = {}
 ProximityPrompt.Initialized = false
+
+local function GetBrainrotDisplayName(name)
+	local brainrotData = BrainrotList[name]
+	return BrainrotDisplayName.Get(name, brainrotData)
+end
 
 local function CreateAttache(parent, name, pos)
 	local attache = Instance.new("Attachment")
@@ -199,6 +205,7 @@ function ProximityPrompt:createPrompt(actionText, parent, duration)
 	prompt.ObjectText = "Brainrot"
 	prompt.KeyboardKeyCode = Enum.KeyCode.E
 	prompt.HoldDuration = duration
+	prompt:SetAttribute("ForceNoLineOfSight", true)
 	prompt.RequiresLineOfSight = false
 	return prompt
 end
@@ -253,7 +260,7 @@ local function CleanupStolenSource(char, brainrotInfo)
 		DataManager.RemoveBrainrot(playerFound, sourceModel:GetAttribute("Position"))
 		MessageModule:SendMessage(
 			playerFound,
-			`{char.Name} has stolen your brainrot {brainrotInfo.Name}`,
+			`{char.Name} has stolen your brainrot {GetBrainrotDisplayName(brainrotInfo.Name)}`,
 			3.5
 		)
 
@@ -540,7 +547,7 @@ function ProximityPrompt:Steal(prompt : ProximityPrompt, player : Player)
 			local playerFound = Players:FindFirstChild(owner)
 			if playerFound then
 
-				MessageModule:SendMessage(playerFound, `Someone is stealing your brainrot {model.Name}`, 1.5)
+				MessageModule:SendMessage(playerFound, `Someone is stealing your brainrot {GetBrainrotDisplayName(model.Name)}`, 1.5)
 
 				local BrainrotData = DataManager.GetBrainrot(playerFound, model:GetAttribute("Position"))
 				if not char:GetAttribute("InPlace") and BrainrotData then

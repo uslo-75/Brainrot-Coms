@@ -196,7 +196,7 @@ function RollManager:AnimateButton()
 				if succes then
 					Settings[config.key] = value
 				else
-					MessageModule:SendMessage(player, "You don't have 100 roll to use auto roll !", 2, Color3.new(1,0,0))
+					MessageModule:SendMessage(player, "Join the group or reach 100 rolls to use auto roll !", 2, Color3.new(1,0,0))
 				end
 				
 			end
@@ -385,6 +385,7 @@ function RollManager:CreateTemplate(number)
 			local succes, message = ServiceTable["RemoteEvent"]:InvokeServer("RollFonction", "Buy")
 			
 			if succes then
+				BrainrotSoundPlayer:StopAll()
 				RollSelect.Visible = false
 				Visible(false)
 				if ViewPort then

@@ -15650,7 +15650,7 @@
 								<int name="MaxVisibleGraphemes">-1</int>
 								<string name="OpenTypeFeatures"></string>
 								<bool name="RichText">false</bool>
-								<string name="Text">&#195;&#131;&#194;&#162;&#195;&#130;&#194;&#154;&#195;&#130;&#194;&#160;&#195;&#131;&#194;&#175;&#195;&#130;&#194;&#184;&#195;&#130;&#194;&#143; You will only lose the requirements for the next rebirth!</string>
+								<string name="Text">You will only lose the requirements for the next rebirth!</string>
 								<Color3 name="TextColor3">
 									<R>1</R>
 									<G>1</G>
@@ -41153,7 +41153,7 @@ end)]]></ProtectedString>
 									<int name="MaxVisibleGraphemes">-1</int>
 									<string name="OpenTypeFeatures"></string>
 									<bool name="RichText">false</bool>
-									<string name="Text">&#195;&#131;&#194;&#176;&#195;&#130;&#194;&#159;&#195;&#130;&#194;&#141;&#195;&#130;&#194;&#128; SERVER LUCK &#195;&#131;&#194;&#176;&#195;&#130;&#194;&#159;&#195;&#130;&#194;&#141;&#195;&#130;&#194;&#128;</string>
+									<string name="Text">SERVER LUCK</string>
 									<Color3 name="TextColor3">
 										<R>0.333333343</R>
 										<G>1</G>
@@ -41750,7 +41750,7 @@ end)]]></ProtectedString>
 											<int name="MaxVisibleGraphemes">-1</int>
 											<string name="OpenTypeFeatures"></string>
 											<bool name="RichText">false</bool>
-											<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;50</string>
+											<string name="Text">R$50</string>
 											<Color3 name="TextColor3">
 												<R>1</R>
 												<G>1</G>
@@ -42790,7 +42790,7 @@ end)]]></ProtectedString>
 									<int name="MaxVisibleGraphemes">-1</int>
 									<string name="OpenTypeFeatures"></string>
 									<bool name="RichText">false</bool>
-									<string name="Text">&#195;&#131;&#194;&#162;&#195;&#130;&#194;&#143;&#195;&#130;&#194;&#176; LIMITED OFFERS &#195;&#131;&#194;&#162;&#195;&#130;&#194;&#143;&#195;&#130;&#194;&#176;</string>
+									<string name="Text">LIMITED OFFERS</string>
 									<Color3 name="TextColor3">
 										<R>1</R>
 										<G>1</G>
@@ -43300,7 +43300,7 @@ end)]]></ProtectedString>
 										<int name="MaxVisibleGraphemes">-1</int>
 										<string name="OpenTypeFeatures"></string>
 										<bool name="RichText">false</bool>
-										<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;8,999</string>
+										<string name="Text">R$8,999</string>
 										<Color3 name="TextColor3">
 											<R>0</R>
 											<G>1</G>
@@ -43434,7 +43434,7 @@ end)]]></ProtectedString>
 										<int name="MaxVisibleGraphemes">-1</int>
 										<string name="OpenTypeFeatures"></string>
 										<bool name="RichText">false</bool>
-										<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;19,999</string>
+										<string name="Text">R$19,999</string>
 										<Color3 name="TextColor3">
 											<R>1</R>
 											<G>0</G>
@@ -45088,7 +45088,7 @@ end)]]></ProtectedString>
 										<int name="MaxVisibleGraphemes">-1</int>
 										<string name="OpenTypeFeatures"></string>
 										<bool name="RichText">false</bool>
-										<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;67</string>
+										<string name="Text">R$67</string>
 										<Color3 name="TextColor3">
 											<R>0</R>
 											<G>1</G>
@@ -46012,7 +46012,7 @@ end)]]></ProtectedString>
 										<int name="MaxVisibleGraphemes">-1</int>
 										<string name="OpenTypeFeatures"></string>
 										<bool name="RichText">false</bool>
-										<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;999</string>
+										<string name="Text">R$999</string>
 										<Color3 name="TextColor3">
 											<R>0</R>
 											<G>1</G>
@@ -46146,7 +46146,7 @@ end)]]></ProtectedString>
 										<int name="MaxVisibleGraphemes">-1</int>
 										<string name="OpenTypeFeatures"></string>
 										<bool name="RichText">false</bool>
-										<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;2,000</string>
+										<string name="Text">R$2,000</string>
 										<Color3 name="TextColor3">
 											<R>1</R>
 											<G>0</G>
@@ -47435,7 +47435,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;2000</string>
+												<string name="Text">R$2000</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -48960,7 +48960,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;299</string>
+												<string name="Text">R$299</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -50387,7 +50387,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;100</string>
+												<string name="Text">R$100</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -52038,7 +52038,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;999</string>
+												<string name="Text">R$999</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -52857,7 +52857,7 @@ end)]]></ProtectedString>
 									<int name="MaxVisibleGraphemes">-1</int>
 									<string name="OpenTypeFeatures"></string>
 									<bool name="RichText">false</bool>
-									<string name="Text">&#195;&#131;&#194;&#162;&#195;&#130;&#194;&#154;&#195;&#130;&#194;&#153;&#195;&#131;&#194;&#175;&#195;&#130;&#194;&#184;&#195;&#130;&#194;&#143; GEARS &#195;&#131;&#194;&#162;&#195;&#130;&#194;&#154;&#195;&#130;&#194;&#153;&#195;&#131;&#194;&#175;&#195;&#130;&#194;&#184;&#195;&#130;&#194;&#143;</string>
+									<string name="Text">GEARS</string>
 									<Color3 name="TextColor3">
 										<R>1</R>
 										<G>1</G>
@@ -53056,7 +53056,7 @@ end)]]></ProtectedString>
 									<int name="MaxVisibleGraphemes">-1</int>
 									<string name="OpenTypeFeatures"></string>
 									<bool name="RichText">false</bool>
-									<string name="Text">&#195;&#131;&#194;&#162;&#195;&#130;&#194;&#173;&#195;&#130;&#194;&#144; GAMEPASSES &#195;&#131;&#194;&#162;&#195;&#130;&#194;&#173;&#195;&#130;&#194;&#144;</string>
+									<string name="Text">GAMEPASSES</string>
 									<Color3 name="TextColor3">
 										<R>1</R>
 										<G>1</G>
@@ -53839,7 +53839,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;100</string>
+												<string name="Text">R$100</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -54819,7 +54819,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;200</string>
+												<string name="Text">R$200</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -55823,7 +55823,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;250</string>
+												<string name="Text">R$250</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -56901,7 +56901,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;450</string>
+												<string name="Text">R$450</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -57841,7 +57841,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;10</string>
+												<string name="Text">R$10</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -58699,7 +58699,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;100</string>
+												<string name="Text">R$100</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -59557,7 +59557,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;450</string>
+												<string name="Text">R$450</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -60526,7 +60526,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;850</string>
+												<string name="Text">R$850</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -61384,7 +61384,7 @@ end)]]></ProtectedString>
 												<int name="MaxVisibleGraphemes">-1</int>
 												<string name="OpenTypeFeatures"></string>
 												<bool name="RichText">false</bool>
-												<string name="Text">&#195;&#131;&#194;&#174;&#195;&#130;&#194;&#128;&#195;&#130;&#194;&#130;7000</string>
+												<string name="Text">R$7000</string>
 												<Color3 name="TextColor3">
 													<R>1</R>
 													<G>1</G>
@@ -61784,7 +61784,7 @@ end)]]></ProtectedString>
 									<int name="MaxVisibleGraphemes">-1</int>
 									<string name="OpenTypeFeatures"></string>
 									<bool name="RichText">false</bool>
-									<string name="Text">&#195;&#131;&#194;&#176;&#195;&#130;&#194;&#159;&#195;&#130;&#194;&#146;&#195;&#130;&#194;&#181; MONEY &#195;&#131;&#194;&#176;&#195;&#130;&#194;&#159;&#195;&#130;&#194;&#146;&#195;&#130;&#194;&#181;</string>
+									<string name="Text">MONEY</string>
 									<Color3 name="TextColor3">
 										<R>1</R>
 										<G>1</G>

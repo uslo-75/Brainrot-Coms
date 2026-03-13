@@ -83,7 +83,7 @@ CmdrTypeLists.BrainrotNames = {
 	"Las Vaquitas Saturnitas",
 	"Lerulerulerule",
 	"Lionel Cactuseli",
-	"LirilÃ¬ LarilÃ ",
+	"Lirili Larila",
 	"Los Bombinitos",
 	"Los Boneca_AmbalabuDouble dicen BONECAA",
 	"Los Boneca_Ambalabusitos dicen AMBALABUU",

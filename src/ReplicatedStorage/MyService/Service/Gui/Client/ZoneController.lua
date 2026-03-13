@@ -38,19 +38,59 @@ end
 
 -- Utils
 
+local function getZoneShape(part)
+	local attributeShape = string.lower(tostring(part:GetAttribute("ZoneShape") or ""))
+	if attributeShape == "circle" or attributeShape == "cylinder" then
+		return "circle"
+	end
+
+	if attributeShape == "sphere" or attributeShape == "ball" then
+		return "sphere"
+	end
+
+	if part:IsA("Part") then
+		if part.Shape == Enum.PartType.Cylinder then
+			return "cylinder"
+		end
+
+		if part.Shape == Enum.PartType.Ball then
+			return "sphere"
+		end
+	end
+
+	return "block"
+end
+
 local function isInZone(part, position)
-	local partPos = part.Position
+	local localPosition = part.CFrame:PointToObjectSpace(position)
 	local size = part.Size
+	local zoneShape = getZoneShape(part)
 
-	local horizontalDist = Vector3.new(position.X, 0, position.Z) - Vector3.new(partPos.X, 0, partPos.Z)
-	local halfX = size.X / 2
-	local halfZ = size.Z / 2
+	if zoneShape == "cylinder" then
+		local radius = math.min(size.Y, size.Z) / 2
+		local radialDistance = Vector2.new(localPosition.Y, localPosition.Z).Magnitude
+		local insideRadius = radialDistance <= radius
+		local insideHeight = math.abs(localPosition.X) <= (size.X / 2) + verticalTolerance
+		return insideRadius and insideHeight
+	end
 
-	local insideHorizontal = math.abs(horizontalDist.X) <= halfX and math.abs(horizontalDist.Z) <= halfZ
-	local verticalDist = math.abs(position.Y - partPos.Y)
-	local insideVertical = verticalDist <= verticalTolerance
+	if zoneShape == "circle" then
+		local radius = math.min(size.X, size.Z) / 2
+		local radialDistance = Vector2.new(localPosition.X, localPosition.Z).Magnitude
+		local insideRadius = radialDistance <= radius
+		local insideHeight = math.abs(localPosition.Y) <= (size.Y / 2) + verticalTolerance
+		return insideRadius and insideHeight
+	end
 
-	return insideHorizontal
+	if zoneShape == "sphere" then
+		local radius = math.min(size.X, size.Y, size.Z) / 2
+		return localPosition.Magnitude <= radius + verticalTolerance
+	end
+
+	local insideHorizontal = math.abs(localPosition.X) <= (size.X / 2) and math.abs(localPosition.Z) <= (size.Z / 2)
+	local insideVertical = math.abs(localPosition.Y) <= (size.Y / 2) + verticalTolerance
+
+	return insideHorizontal and insideVertical
 end
 
 -- Init
