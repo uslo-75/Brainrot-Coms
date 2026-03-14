@@ -93,6 +93,8 @@ local GameConfig = {
 		Positions = {
 			-- Runtime pivot target for the BubbleGum map.
 			BubbleGum = Vector3.new(-0.047, 21.842, -0.02),
+			-- Runtime pivot target for the Electric map.
+			Electric = Vector3.new(0.118, 76.514, -0.575),
 			-- Runtime pivot target for the Freeze map.
 			Freeze = Vector3.new(-1.377, 63.441, 0.002),
 			-- Runtime pivot target for the Solar map.
@@ -105,7 +107,7 @@ local GameConfig = {
 
 		AdminAbusePositions = {
 			-- Runtime pivot target for the Disco admin abuse map.
-			Disco = Vector3.new(-0.047, 58.105, -0.02),
+			Disco = Vector3.new(-119.955, 315.438, -0.284),
 		},
 	},
 
@@ -134,11 +136,11 @@ local GameConfig = {
 		-- Vertical spawn height used for disco sky drops.
 		FallHeight = 110,
 		-- Percent of the runtime map width used as the drop radius.
-		DropRadiusScale = 0.22,
+		DropRadiusScale = 0.14,
 		-- Smallest allowed drop radius around the map center.
-		DropRadiusMin = 12,
+		DropRadiusMin = 8,
 		-- Largest allowed drop radius around the map center.
-		DropRadiusMax = 34,
+		DropRadiusMax = 20,
 		-- Fastest travel time for a brainrot falling from the sky.
 		DropFallTimeMin = 2.75,
 		-- Slowest travel time for a brainrot falling from the sky.

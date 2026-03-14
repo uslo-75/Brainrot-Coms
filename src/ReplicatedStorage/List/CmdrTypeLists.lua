@@ -176,6 +176,7 @@ CmdrTypeLists.Mutations = {
 CmdrTypeLists.MapMutations = {
 	"Normal",
 	"BubbleGum",
+	"Electric",
 	"Freeze",
 	"Solar",
 	"Spectral",

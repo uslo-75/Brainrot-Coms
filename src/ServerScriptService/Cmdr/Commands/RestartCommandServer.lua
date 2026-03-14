@@ -1,9 +1,10 @@
 local MessagingService = game:GetService("MessagingService")
+local ServerStorage = game:GetService("ServerStorage")
 
-local ServerRestartManager = require(game.ServerStorage.Module.ServerRestartManager)
+local ServerRestartManager = require(ServerStorage.Module.ServerRestartManager)
 
-local function normalizeScope(scope)
-	if scope == "Global" or scope == "Globale" then
+local function normalizeScope(value)
+	if value == "Global" or value == "Globale" then
 		return "Global"
 	end
 

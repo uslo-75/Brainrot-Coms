@@ -20,6 +20,7 @@ local discoConfig = GameConfig.Disco
 local DISCO_RUNTIME_FOLDER = discoConfig.RuntimeFolderName
 local DISCO_BALL_NAME = discoConfig.BallName
 local DISCO_RIG_PREFIX = discoConfig.RigPrefix
+local DISCO_TRUSS_SPOTLIGHT_NAME = "Truss with spotlight"
 local DISCO_BALL_ROTATION_SPEED = math.rad(discoConfig.BallRotationSpeedDegrees)
 local DISCO_RIG_RETRY_INTERVAL = discoConfig.RigRetryInterval
 local DISCO_FALL_HEIGHT = discoConfig.FallHeight
@@ -97,6 +98,86 @@ local function configureDiscoBall(instance)
 	end
 end
 
+local function configureDiscoTrussSpotlights(state)
+	local runtimeModel = getRuntimeMutationMap()
+	if not runtimeModel then
+		return false
+	end
+
+	local configuredAny = false
+
+	for _, descendant in ipairs(runtimeModel:GetDescendants()) do
+		if descendant:IsA("Model") and descendant.Name == DISCO_TRUSS_SPOTLIGHT_NAME then
+			for _, part in ipairs(getDiscoBallParts(descendant)) do
+				part.CanCollide = false
+				part.CanTouch = false
+			end
+
+			configuredAny = true
+		end
+	end
+
+	state.DiscoTrussesConfigured = configuredAny
+	return configuredAny
+end
+
+local function getDropAreaFromDiscoBall(runtimeModel)
+	local discoBall = runtimeModel and runtimeModel:FindFirstChild(DISCO_BALL_NAME, true)
+	if not discoBall then
+		return nil
+	end
+
+	local centerPosition = nil
+	local radius = DISCO_DROP_RADIUS_MIN
+	local ballHeight = 0
+
+	if discoBall:IsA("Model") then
+		local pivotSuccess, pivot = pcall(function()
+			return discoBall:GetPivot()
+		end)
+		local boundsSuccess, _, size = pcall(function()
+			return discoBall:GetBoundingBox()
+		end)
+
+		if pivotSuccess then
+			centerPosition = pivot.Position
+		end
+
+		if boundsSuccess then
+			ballHeight = size.Y
+			radius = math.clamp(
+				math.floor((math.max(size.X, size.Z) * 3) + 0.5),
+				DISCO_DROP_RADIUS_MIN,
+				DISCO_DROP_RADIUS_MAX
+			)
+		end
+	elseif discoBall:IsA("BasePart") then
+		centerPosition = discoBall.Position
+		ballHeight = discoBall.Size.Y
+		radius = math.clamp(
+			math.floor((math.max(discoBall.Size.X, discoBall.Size.Z) * 3) + 0.5),
+			DISCO_DROP_RADIUS_MIN,
+			DISCO_DROP_RADIUS_MAX
+		)
+	end
+
+	if not centerPosition then
+		return nil
+	end
+
+	local spawnYOffset = math.clamp(
+		math.max(ballHeight * 1.5, 12),
+		12,
+		math.max(18, DISCO_FALL_HEIGHT * 0.3)
+	)
+
+	return {
+		CenterPosition = centerPosition,
+		Radius = radius,
+		SpawnY = centerPosition.Y + spawnYOffset,
+	}
+end
+
 local function stopDiscoRigAnimations(state)
 	for _, track in ipairs(state.DiscoRigTracks or {}) do
 		pcall(function()
@@ -116,6 +197,8 @@ local function startDiscoRigAnimations(state)
 		state.NextDiscoRigRetryAt = os.clock() + DISCO_RIG_RETRY_INTERVAL
 		return
 	end
+
+	configureDiscoTrussSpotlights(state)
 
 	stopDiscoRigAnimations(state)
 
@@ -569,6 +652,11 @@ end
 local function getDropArea(fallbackPosition)
 	local runtimeModel = getRuntimeMutationMap()
 	if runtimeModel and runtimeModel:IsA("Model") then
+		local discoBallDropArea = getDropAreaFromDiscoBall(runtimeModel)
+		if discoBallDropArea then
+			return discoBallDropArea
+		end
+
 		local success, runtimeCFrame, runtimeSize = pcall(function()
 			return runtimeModel:GetBoundingBox()
 		end)
@@ -584,6 +672,7 @@ local function getDropArea(fallbackPosition)
 			return {
 				CenterPosition = runtimeCFrame.Position,
 				Radius = radius,
+				SpawnY = runtimeCFrame.Position.Y + DISCO_FALL_HEIGHT,
 			}
 		end
 	end
@@ -591,6 +680,7 @@ local function getDropArea(fallbackPosition)
 	return {
 		CenterPosition = fallbackPosition or Vector3.zero,
 		Radius = 14,
+		SpawnY = (fallbackPosition or Vector3.zero).Y + DISCO_FALL_HEIGHT,
 	}
 end
 
@@ -640,13 +730,19 @@ local function getDropTargetCFrame(state, model, dropArea)
 	end
 
 	local lift = getDropLift(model)
+	local rayOriginY = dropArea.SpawnY or (dropArea.CenterPosition.Y + DISCO_FALL_HEIGHT)
+	local rayDistance = math.max(DISCO_FALL_HEIGHT * 2, math.abs(rayOriginY - dropArea.CenterPosition.Y) + DISCO_FALL_HEIGHT)
 
 	for _ = 1, 12 do
 		local angle = math.random() * math.pi * 2
 		local distance = math.sqrt(math.random()) * dropArea.Radius
 		local offset = Vector3.new(math.cos(angle) * distance, 0, math.sin(angle) * distance)
-		local origin = dropArea.CenterPosition + offset + Vector3.new(0, DISCO_FALL_HEIGHT, 0)
-		local result = Workspace:Raycast(origin, Vector3.new(0, -(DISCO_FALL_HEIGHT * 2), 0), rayParams)
+		local origin = Vector3.new(
+			dropArea.CenterPosition.X + offset.X,
+			rayOriginY,
+			dropArea.CenterPosition.Z + offset.Z
+		)
+		local result = Workspace:Raycast(origin, Vector3.new(0, -rayDistance, 0), rayParams)
 		if result then
 			local position = result.Position + Vector3.new(0, lift, 0)
 			return CFrame.new(position)
@@ -660,11 +756,13 @@ local function animateSkyDrop(state, model, targetCFrame)
 	local targetPosition = targetCFrame.Position
 	local dropArea = state.DropArea
 	local startRadius = math.max(8, math.floor(dropArea.Radius * 0.5))
+	local startY = dropArea.SpawnY or (targetPosition.Y + DISCO_FALL_HEIGHT)
 	local startPosition = targetPosition + Vector3.new(
 		math.random(-startRadius, startRadius),
-		DISCO_FALL_HEIGHT,
+		0,
 		math.random(-startRadius, startRadius)
 	)
+	startPosition = Vector3.new(startPosition.X, startY, startPosition.Z)
 	local duration = DISCO_DROP_FALL_TIME_MIN
 	if DISCO_DROP_FALL_TIME_MAX > DISCO_DROP_FALL_TIME_MIN then
 		duration += math.random() * (DISCO_DROP_FALL_TIME_MAX - DISCO_DROP_FALL_TIME_MIN)
@@ -734,6 +832,7 @@ local function spawnSkyDrop(state)
 	BrainrotSelect:PrepareDroppedModel(model)
 	BrainrotSelect:SetInfoByMode(model, { "Default", "" }, brainrotData)
 
+	state.DropArea = getDropArea(state.DropFallbackPosition)
 	local targetCFrame = getDropTargetCFrame(state, model, state.DropArea)
 	animateSkyDrop(state, model, targetCFrame)
 
@@ -799,9 +898,11 @@ function DiscoModeManager:Start(options)
 
 	local state = {
 		Active = true,
-		DropArea = getDropArea(options and options.TargetPosition),
+		DropArea = nil,
+		DropFallbackPosition = options and options.TargetPosition,
 		DiscoBall = nil,
 		DiscoBallConfigured = false,
+		DiscoTrussesConfigured = false,
 		DiscoRigTracks = {},
 		NextDiscoRigRetryAt = 0,
 		GroundParts = {},
@@ -810,6 +911,7 @@ function DiscoModeManager:Start(options)
 	}
 
 	activeState = state
+	state.DropArea = getDropArea(state.DropFallbackPosition)
 	startDiscoRigAnimations(state)
 
 	for _, player in ipairs(Players:GetPlayers()) do
@@ -833,6 +935,10 @@ function DiscoModeManager:Start(options)
 	state.DiscoBallConnection = RunService.Heartbeat:Connect(function(deltaTime)
 		if not state.Active then
 			return
+		end
+
+		if not state.DiscoTrussesConfigured then
+			configureDiscoTrussSpotlights(state)
 		end
 
 		if #state.DiscoRigTracks == 0 and os.clock() >= (state.NextDiscoRigRetryAt or 0) then

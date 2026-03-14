@@ -80,6 +80,12 @@ local MAP_DEFINITIONS = {
 		LightingName = "BubbleGum Map",
 		TargetPosition = mapPositions.BubbleGum,
 	},
+	Electric = {
+		DisplayName = "Electric",
+		MapName = "Electric Map",
+		LightingName = "Electrical Map",
+		TargetPosition = mapPositions.Electric,
+	},
 	Freeze = {
 		DisplayName = "Freeze",
 		MapName = "Ice Map",
@@ -112,6 +118,7 @@ local ADMIN_ABUSE_DEFINITIONS = {
 		MapName = "Disco Map",
 		LightingName = "Disco Map",
 		TargetPosition = adminAbusePositions.Disco,
+		SpawnLocationBehavior = "Disable",
 		OnEnter = function(definition)
 			return DiscoModeManager:Start({
 				TargetPosition = definition.TargetPosition,
@@ -383,14 +390,18 @@ local function getChildrenPivot(children)
 	return nil
 end
 
-local function removeRuntimeSpawnPoints(runtimeModel)
+local function applyRuntimeSpawnLocationBehavior(runtimeModel, behavior)
 	if not runtimeModel then
 		return
 	end
 
 	for _, descendant in ipairs(runtimeModel:GetDescendants()) do
 		if descendant:IsA("SpawnLocation") then
-			descendant:Destroy()
+			if behavior == "Disable" then
+				descendant.Enabled = false
+			else
+				descendant:Destroy()
+			end
 		end
 	end
 end
@@ -548,7 +559,7 @@ local function restoreOriginalMap()
 	showOriginalMaps()
 end
 
-local function applyMapTemplate(folderName, extraOffset, targetPosition)
+local function applyMapTemplate(folderName, extraOffset, targetPosition, spawnLocationBehavior)
 	local mapTemplate = getMapLibrary():FindFirstChild(folderName)
 	if not mapTemplate then
 		return false, `Map "{folderName}" introuvable dans ServerStorage.MutationsMap.`
@@ -563,7 +574,7 @@ local function applyMapTemplate(folderName, extraOffset, targetPosition)
 	end
 
 	local runtimeModel = applyMapChildren(childrenToClone, mapTemplate:FindFirstChild("Base"), true, extraOffset, targetPosition)
-	removeRuntimeSpawnPoints(runtimeModel)
+	applyRuntimeSpawnLocationBehavior(runtimeModel, spawnLocationBehavior)
 	return true
 end
 
@@ -679,7 +690,12 @@ end
 local function applyMode(modeName, definition)
 	local mapApplied, mapError = true, nil
 	if definition.MapName then
-		mapApplied, mapError = applyMapTemplate(definition.MapName, nil, definition.TargetPosition)
+		mapApplied, mapError = applyMapTemplate(
+			definition.MapName,
+			nil,
+			definition.TargetPosition,
+			definition.SpawnLocationBehavior
+		)
 	end
 
 	if not mapApplied then

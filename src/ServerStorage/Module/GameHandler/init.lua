@@ -19,6 +19,7 @@ local ServerLuck = game.ServerScriptService.Server.LuckServer
 local GLOBAL_MAP_MUTATION_TOPIC = "GlobalMapMutationEvent"
 local GLOBAL_ADMIN_ABUSE_TOPIC = "GlobalAdminAbuseEvent"
 local GLOBAL_SERVER_RESTART_TOPIC = ServerRestartManager.GLOBAL_TOPIC
+local GLOBAL_FUSE_TIME_TOPIC = "GlobalFuseTimeEvent"
 local initialized = false
 local promptWatchStarted = false
 local FORCE_NO_LINE_OF_SIGHT_ATTRIBUTE = "ForceNoLineOfSight"
@@ -310,6 +311,32 @@ MessagingService:SubscribeAsync(GLOBAL_SERVER_RESTART_TOPIC, function(data)
 	local success, message = ServerRestartManager:RestartLocal(info.ExecutorName or "Console", "Global")
 	if not success then
 		warn("[GlobalServerRestartEvent] Restart failed:", message)
+	end
+end)
+
+MessagingService:SubscribeAsync(GLOBAL_FUSE_TIME_TOPIC, function(data)
+	local info = data.Data
+	if not info or info.SourceJobId == game.JobId then
+		return
+	end
+
+	local updatedCount = 0
+
+	for _, player in ipairs(Players:GetPlayers()) do
+		local machine = Machine:Return() or Machine:Init(player)
+		if machine then
+			local success = machine:SetFuseRemainingTime(player, info.Seconds)
+			if success then
+				updatedCount += 1
+			end
+		end
+	end
+
+	if updatedCount > 0 and info.ExecutorName then
+		local announcement = string.format("%s a modifie le temps des fusions globalement.", info.ExecutorName)
+		for _, player in ipairs(Players:GetPlayers()) do
+			MessageModule:SendMessage(player, announcement, 2.5, Color3.new(1, 1, 1))
+		end
 	end
 end)
 

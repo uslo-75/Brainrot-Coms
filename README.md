@@ -22,16 +22,19 @@ Projet Roblox type tycoon/collection autour des brainrots, avec architecture Roj
 - Nettoyage des textes casses dans le shop, rebirth et certains noms de brainrots.
 - Transition de map securisee avec ancrage temporaire des joueurs pour eviter les chutes sous la map.
 - Liste de sky drops disco configurable dans `src/ServerStorage/List/DiscoDropList.lua`.
-- Commande de restart local/global ajoutee pour les serveurs.
+- Mutation de map `Electric` ajoutee aux commandes admin.
+- Ajustements du mode Disco : position de map, spawn locations desactivees, collisions retirees sur certains props, sky drops recentres autour de la disco ball.
+- Commandes de restart local/global et de fuse time global disponibles pour les serveurs.
 
 ## Commandes admin IG
 
 Le projet utilise Cmdr. Les commandes actuellement exposees dans le dossier `Cmdr/Commands` sont :
 
 - `AdminAbuse <Mode> <Scope>` : modes dispo `Normal`, `Disco` ; scope `Local` ou `Global`.
-- `SetMapMutation <Mutation> <Scope>` : mutations de map dispo `Normal`, `BubbleGum`, `Freeze`, `Solar`, `Spectral`, `Volcan`.
+- `SetMapMutation <Mutation> <Scope>` : mutations de map dispo `Normal`, `BubbleGum`, `Electric`, `Freeze`, `Solar`, `Spectral`, `Volcan`.
 - `LuckServer <LuckBuff> [Time]` : applique un buff de luck global.
 - `RestartServer [Scope]` : restart soft du serveur courant ou de tous les serveurs (`Local` ou `Global`).
+- `SetFuseTimeGlobal <Seconds>` : force le temps restant de toutes les fusions actives sur tous les serveurs.
 - `AddBrainrot <BrainrotName> <Mutation> [Slots] [Player]` : ajoute un brainrot.
 - `RemoveBrainrot <Position> [Player]` : supprime un brainrot d'un slot.
 - `MoveBrainrot <FromPosition> <ToPosition> [Player]` : deplace ou swap un brainrot.
